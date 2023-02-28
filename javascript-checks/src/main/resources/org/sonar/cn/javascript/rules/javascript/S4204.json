@@ -1,0 +1,19 @@
+{
+  "title": "The \"any\" type should not be used",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "pitfall"
+  ],
+  "defaultSeverity": "Major",
+  "ruleSpecification": "RSPEC-4204",
+  "sqKey": "S4204",
+  "compatibleLanguages": [
+    "TYPESCRIPT"
+  ],
+  "scope": "All"
+}

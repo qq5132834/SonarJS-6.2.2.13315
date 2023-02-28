@@ -1,0 +1,26 @@
+{
+  "title": "Switch cases should end with an unconditional \"break\" statement",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "10min"
+  },
+  "tags": [
+    "cwe",
+    "suspicious"
+  ],
+  "defaultSeverity": "Blocker",
+  "ruleSpecification": "RSPEC-128",
+  "sqKey": "S128",
+  "compatibleLanguages": [
+    "JAVASCRIPT",
+    "TYPESCRIPT"
+  ],
+  "scope": "All",
+  "securityStandards": {
+    "CWE": [
+      484
+    ]
+  }
+}

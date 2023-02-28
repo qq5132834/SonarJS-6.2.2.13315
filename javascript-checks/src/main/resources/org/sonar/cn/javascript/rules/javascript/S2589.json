@@ -1,0 +1,28 @@
+{
+  "title": "Boolean expressions should not be gratuitous",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "10min"
+  },
+  "tags": [
+    "cwe",
+    "redundant"
+  ],
+  "defaultSeverity": "Major",
+  "ruleSpecification": "RSPEC-2589",
+  "sqKey": "S2589",
+  "compatibleLanguages": [
+    "JAVASCRIPT",
+    "TYPESCRIPT"
+  ],
+  "scope": "All",
+  "securityStandards": {
+    "CWE": [
+      489,
+      571,
+      570
+    ]
+  }
+}
