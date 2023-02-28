@@ -1,5 +1,5 @@
 {
-  "title": "Jump statements should not occur in \"finally\" blocks",
+  "title": "跳转语句不应出现在\"finally\"块中",
   "type": "BUG",
   "status": "ready",
   "remediation": {
