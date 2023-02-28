@@ -1,7 +1,8 @@
-<p>Duplicated string literals make the process of refactoring error-prone, since you must be sure to update all occurrences.</p>
-<p>On the other hand, constants can be referenced from many places, but only need to be updated in a single place.</p>
-<h2>Exceptions</h2>
-<p>To prevent generating some false-positives, literals having less than 10 characters are excluded as well as literals matching <code>/^\w*$/</code>.
-String literals inside import/export statements and JSX attributes are also ignored. The same goes for statement-like string literals, e.g. <code>'use
-strict';</code>.</p>
+<p>重复的字符串文字使重构过程容易出错，因为您必须确保更新所有出现的地方。</p>
+<p>另一方面，常量可以从很多地方被引用，但只需要在一个地方被更新。</p>
+<h2>例外</h2>
+<p>
+  为了防止产生一些误报，少于 10 个字符的文字以及匹配 <code>/^\w*$/</code> 的文字被排除在外。
+  导入/导出语句和 JSX 属性中的字符串文字也将被忽略。 类似语句的字符串文字也是如此，例如 <code>'use strict';</code>。
+</p>
 
