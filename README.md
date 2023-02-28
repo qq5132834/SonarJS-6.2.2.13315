@@ -1,3 +1,5 @@
+# mvn clean package -Dmaven.test.skip=true
+
 # SonarJS [![Quality Gate](https://next.sonarqube.com/sonarqube/api/project_badges/measure?project=org.sonarsource.javascript%3Ajavascript&metric=alert_status)](https://next.sonarqube.com/sonarqube/dashboard?id=org.sonarsource.javascript%3Ajavascript) [![Coverage](https://next.sonarqube.com/sonarqube/api/project_badges/measure?project=org.sonarsource.javascript%3Ajavascript&metric=coverage)](https://next.sonarqube.com/sonarqube/component_measures/domain/Coverage?id=org.sonarsource.javascript%3Ajavascript)
 
 SonarJS is a [static code analyser](https://en.wikipedia.org/wiki/Static_program_analysis) for the JavaScript and TypeScript languages, plugin for SonarQube and SonarCloud.
