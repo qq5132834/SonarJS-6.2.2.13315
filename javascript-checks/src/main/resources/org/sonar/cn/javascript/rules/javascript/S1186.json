@@ -1,5 +1,5 @@
 {
-  "title": "Functions should not be empty",
+  "title": "函数不能为空",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
