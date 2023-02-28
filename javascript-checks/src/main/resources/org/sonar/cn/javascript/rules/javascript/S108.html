@@ -1,8 +1,8 @@
-<p>Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.</p>
+<p>代码块不应为空。空代码块必须填充或者移除</p>
 <h2>Noncompliant Code Example</h2>
 <pre>
-for (var i = 0; i &lt; length; i++) {}  // Empty on purpose or missing piece of code ?
+for (var i = 0; i &lt; length; i++) {}  // {}代码块不应为空
 </pre>
-<h2>Exceptions</h2>
-<p>When a block contains a comment, this block is not considered to be empty. Moreover <code>catch</code> blocks are ignored.</p>
+<h2>例外</h2>
+<p>当块包含注释时，此块不被视为空。 此外忽略 <code>catch{}</code> 块</p>
 
