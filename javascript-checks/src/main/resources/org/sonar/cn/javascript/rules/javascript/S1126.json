@@ -1,5 +1,5 @@
 {
-  "title": "Return of boolean expressions should not be wrapped into an \"if-then-else\" statement",
+  "title": "布尔表达式的返回不应包含在\"if-then-else\"语句中",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
