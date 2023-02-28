@@ -1,0 +1,15 @@
+{
+'es5-shim:es5-shim.js':[
+311,
+314,
+325,
+],
+'es5-shim:tests/lib/jasmine.js':[
+485,
+587,
+],
+'es5-shim:tests/spec/s-date.js':[
+180,
+487,
+],
+}

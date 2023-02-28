@@ -1,0 +1,11 @@
+{
+'qunit:src/cli/require-from-cwd.js':[
+5,
+],
+'qunit:src/cli/run.js':[
+42,
+],
+'qunit:test/logs.js':[
+201,
+],
+}

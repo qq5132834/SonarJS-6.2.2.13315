@@ -1,0 +1,12 @@
+{
+  "extends": "../src/tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false
+  },
+  "references": [ {
+    "path": "../src"
+  }],
+  "exclude": ["**/fixtures/**"]
+}

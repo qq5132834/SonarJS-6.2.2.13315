@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "target": "es6",  
+    "allowJs": true
+  },
+  "files": ["sample.lint.ts", "duplication.lint.ts", "nosonar.lint.ts"]
+}
