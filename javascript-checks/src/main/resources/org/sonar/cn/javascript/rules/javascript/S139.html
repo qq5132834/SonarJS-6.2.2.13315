@@ -1,14 +1,11 @@
-<p>This rule verifies that single-line comments are not located at the ends of lines of code. The main idea behind this rule is that in order to be
-really readable, trailing comments would have to be properly written and formatted (correct alignment, no interference with the visual structure of
-the code, not too long to be visible) but most often, automatic code formatters would not handle this correctly: the code would end up less readable.
-Comments are far better placed on the previous empty line of code, where they will always be visible and properly formatted.</p>
-<h2>Noncompliant Code Example</h2>
+<p>注释不应位于代码行的末尾</p>
+<h2>不合规示例</h2>
 <pre>
-var a1 = b + c; // This is a trailing comment that can be very very long
+var a1 = b + c; // 这是一条很长的尾随评论
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
-// This very long comment is better placed before the line of code
+// 这个很长的注释最好放在代码行之前
 var a2 = b + c;
 </pre>
 
