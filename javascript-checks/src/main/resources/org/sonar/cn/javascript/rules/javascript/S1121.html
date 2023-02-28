@@ -1,23 +1,17 @@
-<p>Assignments within sub-expressions are hard to spot and therefore make the code less readable. Ideally, sub-expressions should not have
-side-effects.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  子表达式中的赋值很难被发现，因此会降低代码的可读性。
+  理想情况下，子表达式不应有副作用。
+</p>
+<h2>不合规示例</h2>
 <pre>
-if ((str = cont.substring(pos1, pos2)) != '') { // Noncompliant
+if ((str = cont.substring(pos1, pos2)) != '') { // 不合规
   //...
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 str = cont.substring(pos1, pos2);
 if (str != '') {
   //...
 }
 </pre>
-<h2>See</h2>
-<ul>
-  <li> <a href="http://cwe.mitre.org/data/definitions/481.html">MITRE, CWE-481</a> - Assigning instead of Comparing </li>
-  <li> <a href="https://www.securecoding.cert.org/confluence/x/nYFtAg">CERT, EXP45-C.</a> - Do not perform assignments in selection statements </li>
-  <li> <a href="https://www.securecoding.cert.org/confluence/x/1gCTAw">CERT, EXP51-J.</a> - Do not perform assignments in conditional expressions
-  </li>
-</ul>
-
