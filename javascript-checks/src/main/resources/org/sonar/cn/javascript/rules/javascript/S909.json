@@ -1,5 +1,5 @@
 {
-  "title": "\"continue\" should not be used",
+  "title": "不应使用\"continue\"",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
