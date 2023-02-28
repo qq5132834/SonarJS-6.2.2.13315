@@ -1,20 +1,20 @@
-<p>While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.</p>
-<h2>Noncompliant Code Example</h2>
+<p>虽然在技术上并非不正确，但省略大括号可能会产生误导，并可能导致在维护过程中引入错误。</p>
+<h2>不合规示例</h2>
 <pre>
-if (condition)  // Noncompliant
+if (condition)  // 不合规
   executeSomething();
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 if (condition) {
   executeSomething();
 }
 </pre>
-<h2>See</h2>
+<h2>参考</h2>
 <ul>
-  <li> <a href="https://www.securecoding.cert.org/confluence/x/1QGMAg">CERT, EXP19-C.</a> - Use braces for the body of an if, for, or while statement
+  <li> <a href="https://www.securecoding.cert.org/confluence/x/1QGMAg">CERT, EXP19-C.</a> - 在if、for或while语句的主体使用大括号
   </li>
-  <li> <a href="https://www.securecoding.cert.org/confluence/x/3wHEAw">CERT, EXP52-J.</a> - Use braces for the body of an if, for, or while statement
+  <li> <a href="https://www.securecoding.cert.org/confluence/x/3wHEAw">CERT, EXP52-J.</a> - 在if、for或while语句的主体使用大括号
   </li>
 </ul>
 
