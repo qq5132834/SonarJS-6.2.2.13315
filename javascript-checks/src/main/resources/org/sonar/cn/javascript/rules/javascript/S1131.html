@@ -1,10 +1,9 @@
-<p>Trailing whitespaces are simply useless and should not stay in code. They may generate noise when comparing different versions of the same
-file.</p>
-<p>If you encounter issues from this rule, this probably means that you are not using an automated code formatter - which you should if you have the
-opportunity to do so. </p>
-<h2>Noncompliant Code Example</h2>
+<p>trailing whitespace根本没用，不应该留在代码中。原因：</p>
+<p>trailing whitespace会带来commit noise</p>
+<p>如果编辑器没有配置显示trailing whitespace，很难排查trailing whitespace带来的bug； </p>
+<h2>不合规示例</h2>
 <pre>
-// The following string will error if there is a whitespace after '\'
+// 如果 '\' 后有空格，则以下字符串将出错
 var str = "Hello \
 World";
 </pre>
