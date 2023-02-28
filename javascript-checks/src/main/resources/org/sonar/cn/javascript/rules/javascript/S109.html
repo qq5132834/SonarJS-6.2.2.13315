@@ -1,18 +1,16 @@
-<p>A magic number is a number that comes out of nowhere, and is directly used in a statement. Magic numbers are often used, for instance to limit the
-number of iterations of a loop, to test the value of a property, etc.</p>
-<p>Using magic numbers may seem obvious and straightforward when you're writing a piece of code, but they are much less obvious and straightforward at
-debugging time.</p>
-<p>That is why magic numbers must be demystified by first being assigned to clearly named variables before being used.</p>
-<p>-1, 0 and 1 are not considered magic numbers.</p>
-<h2>Noncompliant Code Example</h2>
+<p>在语句中使用不知从何而来的魔鬼数字。例如，经常使用魔鬼数字来限制循环的迭代次数，以测试属性的值。</p>
+<p>当在编写一段代码时，使用魔鬼数字可能看起来很明显很简单，但在调试时，它们就不会变得莫名其妙。</p>
+<p>这就是为什么在使用魔鬼数字之前，必须先将其分配给明确命名的变量，以便能解开其神秘面纱。</p>
+<p>-1、0、1通常不被认为是魔鬼数字。</p>
+<h2>不合规示例</h2>
 <pre>
 function doSomething() {
-  for (let i = 0; i &lt; 4; i++) {    // Noncompliant, 4 is a magic number
+  for (let i = 0; i &lt; 4; i++) {    // 不合规，4是魔鬼数字
     // ...
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function doSomething() {
   const numberOfCycles = 4;

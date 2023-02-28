@@ -1,5 +1,5 @@
 {
-  "title": "Magic numbers should not be used",
+  "title": "不应使用魔鬼数字",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
