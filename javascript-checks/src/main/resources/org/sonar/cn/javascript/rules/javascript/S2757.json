@@ -1,5 +1,5 @@
 {
-  "title": "Non-existent operators '=+', '=-' and '=!' should not be used",
+  "title": "不存在的运算符'=+'、'=-'和'=!'不应使用",
   "type": "BUG",
   "status": "ready",
   "remediation": {
