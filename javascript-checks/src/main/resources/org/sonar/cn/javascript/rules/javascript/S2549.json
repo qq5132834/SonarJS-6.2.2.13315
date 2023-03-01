@@ -1,5 +1,5 @@
 {
-  "title": "The \"changed\" property should not be manipulated directly",
+  "title": " \"changed\" 属性不应被直接操纵",
   "type": "BUG",
   "status": "deprecated",
   "remediation": {
