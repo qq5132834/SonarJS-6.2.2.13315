@@ -1,10 +1,12 @@
-<p>The <code>parseInt</code> function has two versions, one that takes a base value as a second argument, and one that does not. Unfortunately using
-the single-arg version can result in unexpected results on older browsers. </p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  <code>parseInt</code>函数有两个版本，一个采用基值作为第二个参数，另一个不采用基值。
+  不幸的是，在旧浏览器上使用单参数版本可能会导致意外的结果。
+</p>
+<h2>不合规示例</h2>
 <pre>
-parseInt("010");  // Noncompliant; pre-2013 browsers may return 8
+parseInt("010");  // 不合规；2013年以前的浏览器可能返回8
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 parseInt("010", 10);
 </pre>
