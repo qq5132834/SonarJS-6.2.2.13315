@@ -1,43 +1,17 @@
-<p>Conditional expressions which are always <code>true</code> or <code>false</code> can lead to dead code. Such code is always buggy and should never
-be used in production.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  总是<code>true</code>或<code>false</code>的条件表达式可能导致死代码。
+  这样的代码总是有问题的，不应该在生产中使用。
+</p>
+<h2>不合规示例</h2>
 <pre>
 a = false;
-if (a) { // Noncompliant
-  doSomething(); // never executed
+if (a) { // 不合规
+  doSomething(); // 不执行
 }
 
-if (!a || b) { // Noncompliant; "!a" is always "true", "b" is never evaluated
+if (!a || b) { // 不合规； "!a" 总是为 "true", "b" 从未计算过
   doSomething();
 } else {
-  doSomethingElse(); // never executed
+  doSomethingElse(); // 不执行
 }
 </pre>
-<h2>Exceptions</h2>
-<p>This rule will not raise an issue in either of these cases:</p>
-<ul>
-  <li> When the condition is a single <code>const</code> of boolean value </li>
-</ul>
-<pre>
-const debug = false;
-//...
-if (debug) {
-  // Print something
-}
-</pre>
-<ul>
-  <li> When the condition is the literal <code>0</code>, <code>1</code>, <code>true</code> or <code>false</code>. </li>
-</ul>
-<p>In these cases it is obvious the code is as intended.</p>
-<h2>See</h2>
-<ul>
-  <li> <a href="http://cwe.mitre.org/data/definitions/570.html">MITRE, CWE-570</a> - Expression is Always False </li>
-  <li> <a href="http://cwe.mitre.org/data/definitions/571">MITRE, CWE-571</a> - Expression is Always True </li>
-  <li> <a href="https://www.securecoding.cert.org/confluence/x/NYA5">CERT, MSC12-C.</a> - Detect and remove code that has no effect or is never
-  executed </li>
-</ul>
-<!-- Make sure to not drop this deprecation section when doing bulk update (as well as updating S2583.json)  -->
-<!-- This rule is deprecated only for JS language, that's why we can't deprecate it in RSPEC -->
-<h2>Deprecated</h2>
-<p>This rule is deprecated, and will eventually be removed.</p>
-
