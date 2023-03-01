@@ -1,13 +1,10 @@
-<p>Nested <code>switch</code> structures are difficult to understand because you can easily confuse the cases of an inner <code>switch</code> as
-belonging to an outer statement. Therefore nested <code>switch</code> statements should be avoided.</p>
-<p>Specifically, you should structure your code to avoid the need for nested <code>switch</code> statements, but if you cannot, then consider moving
-the inner <code>switch</code> to another function.</p>
-<h2>Noncompliant Code Example</h2>
+<p>switch语句不要嵌套使用。虽然在语法上支持，但是不易于理解和维护。</p>
+<h2>不合规示例</h2>
 <pre>
 function foo(n, m) {
   switch (n) {
     case 0:
-      switch (m) {  // Noncompliant; nested switch
+      switch (m) {  // 不合规; switch嵌套
         // ...
       }
     case 1:
@@ -17,7 +14,7 @@ function foo(n, m) {
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function foo(n, m) {
   switch (n) {
