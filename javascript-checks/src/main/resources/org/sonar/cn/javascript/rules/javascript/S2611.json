@@ -1,5 +1,5 @@
 {
-  "title": "Untrusted content should not be included",
+  "title": "不应包含不受信任的内容",
   "type": "VULNERABILITY",
   "status": "deprecated",
   "remediation": {
