@@ -1,5 +1,5 @@
 {
-  "title": "Statements should end with semicolons",
+  "title": "语句应以分号结尾",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
