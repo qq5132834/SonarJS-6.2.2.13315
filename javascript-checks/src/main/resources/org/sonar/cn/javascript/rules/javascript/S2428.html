@@ -1,18 +1,19 @@
-<p>Object literal syntax, which initializes an object's properties inside the object declaration is cleaner and clearer than the alternative: creating
-an empty object, and then giving it properties one by one.</p>
-<p>An issue is raised when the following pattern is met:</p>
+<p>
+  在对象声明中初始化对象的属性，比其他方法更清晰：创建一个空对象，然后逐个赋值。
+</p>
+<p>当满足以下模式时，会出现问题：</p>
 <ul>
-  <li> An empty object is created. </li>
-  <li> A consecutive single-line statement adds a property to the created object. </li>
+  <li> 将创建一个空对象。 </li>
+  <li> 连续的单行语句将向创建的对象添加属性。</li>
 </ul>
-<h2>Noncompliant Code Example</h2>
+<h2>不合规示例</h2>
 <pre>
-let person = {};  // Noncompliant
+let person = {};  // 不合规
 person.firstName = "John";
 person.middleInitial = "Q";
 person.lastName = "Public";
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 let person = {
   firstName: "John",
