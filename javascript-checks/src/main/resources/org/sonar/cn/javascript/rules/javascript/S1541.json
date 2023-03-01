@@ -1,5 +1,5 @@
 {
-  "title": "Functions should not be too complex",
+  "title": "功能不能太复杂",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
