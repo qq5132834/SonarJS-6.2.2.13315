@@ -1,5 +1,5 @@
 {
-  "title": "\"alert(...)\" should not be used",
+  "title": "不应使用\"alert(...)\"",
   "type": "VULNERABILITY",
   "status": "ready",
   "remediation": {
