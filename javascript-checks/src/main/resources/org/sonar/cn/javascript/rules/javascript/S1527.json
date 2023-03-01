@@ -1,5 +1,5 @@
 {
-  "title": "\"future reserved words\" should not be used as identifiers",
+  "title": "将来的保留字不应用作标识符",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
