@@ -1,5 +1,5 @@
 {
-  "title": "Variables should be used in the blocks where they are declared",
+  "title": "应在声明变量的块中使用变量",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
