@@ -1,5 +1,5 @@
 {
-  "title": "Only \"while\", \"do\", \"for\" and \"switch\" statements should be labelled",
+  "title": "仅应标记while、do、for和switch语句",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
