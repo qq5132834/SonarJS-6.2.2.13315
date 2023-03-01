@@ -1,45 +1,32 @@
-<p>Jump statements (<code>return</code>, <code>break</code> and <code>continue</code>) and <code>throw</code> expressions move control flow out of the
-current code block. So any statements that come after a jump are dead code.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  跳转语句（<code>return</code>、<code>break</code> 和<code>continue</code>）和<code>throw</code> 表达式将控制流移出当前代码块。
+  因此，跳转后的任何语句都是死代码。
+</p>
+<h2>不合规示例</h2>
 <pre>
 function fun(a) {
   var i = 10;
   return i + a;
-  i++;             // Noncompliant; this is never executed
+  i++;             // 不合规; 这里无法执行到
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function fun(int a) {
   var i = 10;
   return i + a;
 }
 </pre>
-<h2>Exceptions</h2>
-<p>This rule ignores unreachable <code>break</code> statements in <code>switch</code> clauses.</p>
+<h2>例外</h2>
+<p>此规则忽略 <code>switch</code> 子句中无法访问的 <code>break</code> 语句。</p>
 <pre>
 switch (x) {
   case 42:
      return 43;
-     break;   // Compliant
+     break;   // 合规
   default:
     doSomething();
 }
 </pre>
-<p>Hoisted variables declarations without initialization are always considered reachable.</p>
-<pre>
-function bar() {
-  return x = function() {
-    x.foo = 42;
-  }
-  var x;
-}
-</pre>
-<h2>See</h2>
-<ul>
-  <li> <a href="http://cwe.mitre.org/data/definitions/561.html">MITRE, CWE-561</a> - Dead Code </li>
-  <li> <a href="https://www.securecoding.cert.org/confluence/x/uQCSBg">CERT, MSC56-J.</a> - Detect and remove superfluous code and values </li>
-  <li> <a href="https://www.securecoding.cert.org/confluence/x/NYA5">CERT, MSC12-C.</a> - Detect and remove code that has no effect or is never
-  executed </li>
-</ul>
+
 
