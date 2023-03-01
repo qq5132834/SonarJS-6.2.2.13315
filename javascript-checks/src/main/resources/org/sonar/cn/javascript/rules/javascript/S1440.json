@@ -1,5 +1,5 @@
 {
-  "title": "\"===\" and \"!==\" should be used instead of \"==\" and \"!=\"",
+  "title": "应使用===和!==代替==和!=",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
