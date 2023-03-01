@@ -1,10 +1,11 @@
-<p>When only the condition expression is defined in a <code>for</code> loop, and the initialization and increment expressions are missing, a
-<code>while</code> loop should be used instead to increase readability. </p>
-<h2>Noncompliant Code Example</h2>
+<p>当在<code>for</code>循环中仅定义条件表达式时，
+  如果缺少初始化表达式和增量表达式，则应使用<code>while</code>循环来提高可读性。
+</p>
+<h2>不合规示例</h2>
 <pre>
 for (;condition;) { /*...*/ }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 while (condition) { /*...*/ }
 </pre>
