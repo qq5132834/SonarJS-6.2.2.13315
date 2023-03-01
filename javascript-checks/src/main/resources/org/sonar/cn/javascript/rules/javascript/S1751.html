@@ -1,16 +1,18 @@
-<p>A loop with at most one iteration is equivalent to the use of an <code>if</code> statement to conditionally execute one piece of code. No developer
-expects to find such a use of a loop statement. If the initial intention of the author was really to conditionally execute one piece of code, an
-<code>if</code> statement should be used instead.</p>
-<p>At worst that was not the initial intention of the author and so the body of the loop should be fixed to use the nested <code>return</code>,
-<code>break</code> or <code>throw</code> statements in a more appropriate way.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  最多迭代一次的循环相当于使用<code>if</code>语句有条件地执行一段代码。 没有开发人员期望找到循环语句的这种用法。
+  如果作者的初衷真的是有条件地执行一段代码，那么应该使用<code>if</code>语句来代替。
+</p>
+<p>
+  在最坏的情况下，这不是作者的初衷，因此循环体应该固定为使用嵌套的 <code>return</code>、<code>break</code> 或 <code>throw</code > 以更恰当的方式陈述。
+</p>
+<h2>不合规示例</h2>
 <pre>
-for (let i = 0; i &lt; 10; i++) { // noncompliant, loop only executes once
+for (let i = 0; i &lt; 10; i++) { // 不合规, 循环只执行一次
   console.log("i is " + i);
   break;
 }
 ...
-for (let i = 0; i &lt; 10; i++) { // noncompliant, loop only executes once
+for (let i = 0; i &lt; 10; i++) { // 不合规, 循环只执行一次
   if (i == x) {
     break;
   } else {
@@ -19,7 +21,7 @@ for (let i = 0; i &lt; 10; i++) { // noncompliant, loop only executes once
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 for (let i = 0; i &lt; 10; i++) {
   console.log("i is " + i);
