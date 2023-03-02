@@ -1,5 +1,5 @@
 {
-  "title": "The output of functions that don't return anything should not be used",
+  "title": "输出没有返回值的函数没有意义",
   "type": "BUG",
   "status": "ready",
   "remediation": {
