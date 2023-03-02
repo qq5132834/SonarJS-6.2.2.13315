@@ -1,12 +1,16 @@
-<p>The <code>in</code> operator tests whether the specified property is in the specified object.</p>
-<p>If the right operand is a of primitive type (i.e., not an object) the <code>in</code> operator raises a <code>TypeError</code>.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  <code>in</code> 运算符测试指定的属性是否在指定的对象中。
+</p>
+<p>
+  如果右操作数是原始类型（即不是对象），则 <code>in</code> 运算符会引发一个 <code>TypeError</code>。
+</p>
+<h2>不合规示例</h2>
 <pre>
 var x = "Foo";
-"length" in x; // Noncompliant: TypeError
-0 in x;        // Noncompliant: TypeError
+"length" in x; // 不合规， TypeError 类型错误
+0 in x;        // 不合规， TypeError 类型错误
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 var x = new String("Foo");
 "length" in x;    // true
