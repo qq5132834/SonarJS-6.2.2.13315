@@ -1,5 +1,5 @@
 {
-  "title": "\"await\" should not be used redundantly",
+  "title": "\"await\" 不应重复使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
