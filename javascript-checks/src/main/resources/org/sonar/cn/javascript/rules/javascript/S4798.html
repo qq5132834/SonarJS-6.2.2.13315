@@ -1,12 +1,14 @@
-<p>Having default value for optional boolean parameters makes the logic of function when missing that parameter more evident. When providing a default
-value is not possible, it is better to split the function into two with a clear responsibility separation.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  为可选的布尔参数设置默认值使得缺少该参数时的函数逻辑更加明显。
+  当无法提供默认值时，最好将功能一分为二，并明确职责分离。
+</p>
+<h2>不合规示例</h2>
 <pre>
-function countPositiveNumbers(arr: number[], countZero?: boolean) { // Noncompliant, default value for 'countZero' should be defined
+function countPositiveNumbers(arr: number[], countZero?: boolean) { // 不合规
   // ...
 }
 
-function toggleProperty(property: string, value?: boolean) { // Noncompliant, a new function should be defined
+function toggleProperty(property: string, value?: boolean) { // 不合规
   if (value !== undefined) {
     setProperty(property, value);
   } else {
@@ -14,7 +16,7 @@ function toggleProperty(property: string, value?: boolean) { // Noncompliant, a 
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function countPositiveNumbers(arr: number[], countZero = false) {
   // ...
