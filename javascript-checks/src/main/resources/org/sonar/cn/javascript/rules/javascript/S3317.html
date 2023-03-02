@@ -1,14 +1,15 @@
-<p>By convention, a file that exports only one class, function, or constant should be named for that class, function or constant. Anything else may
-confuse maintainers.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  按照惯例，仅导出一个类、函数或常量的文件应以该类、函数名称命名。
+</p>
+<h2>不合规示例</h2>
 <pre>
-// file path: myclass.js  -- Noncompliant
+// file path: myclass.js  -- 不合规
 class MyClass {
   // ...
 }
 export default MyClass;
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 // file path: MyClass.js
 class MyClass {
@@ -16,6 +17,4 @@ class MyClass {
 }
 export default MyClass;
 </pre>
-<h2>Exceptions</h2>
-<p>Case, underscores ( <code>_</code> ) and dashes (<code>-</code>) are ignored from the name comparison.</p>
 
