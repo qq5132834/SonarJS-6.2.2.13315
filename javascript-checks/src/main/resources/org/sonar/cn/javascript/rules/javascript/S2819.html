@@ -1,20 +1,9 @@
-<p>HTML5 adds the ability to send messages to documents served from other domains. According to the specification:</p>
-<blockquote>
-  Authors should not use the wildcard keyword (
-  <code>*</code>) in the
-  <code>targetOrigin</code> argument in messages that contain any confidential information, as otherwise there is no way to guarantee that the message
-  is only delivered to the recipient to which it was intended.
-</blockquote>
-<p>To mitigate the risk of sending sensitive information to a document served from a hostile or unknown domain, this rule raises an issue each time
-<code>Window.postMessage</code> is used.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  HTML5增加了向其他域提供的文档发送消息的能力。
+</p>
+<h2>不合规示例</h2>
 <pre>
 var myWindow = document.getElementById('myIFrame').contentWindow;
-myWindow.postMessage(message, "*"); // Noncompliant; how do you know what you loaded in 'myIFrame' is still there?
+myWindow.postMessage(message, "*"); // 不合规；如何判断 myIFrame 中加载的内容仍然存在？
 </pre>
-<h2>See</h2>
-<ul>
-  <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A7-Cross-Site_Scripting_(XSS)">OWASP Top 10 2017 Category A7</a> - Cross-Site Scripting
-  (XSS) </li>
-</ul>
 
