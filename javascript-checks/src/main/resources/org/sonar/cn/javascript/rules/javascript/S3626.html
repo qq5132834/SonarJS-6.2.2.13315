@@ -1,15 +1,17 @@
-<p>Jump statements, such as <code>return</code>, <code>break</code> and <code>continue</code> let you change the default flow of program execution,
-but jump statements that direct the control flow to the original direction are just a waste of keystrokes.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  跳转语句，例如 <code>return</code>、<code>break</code> 和 <code>continue</code> 可以让您更改程序执行流程，
+  但是控制流方向与跳转方式一致时，加上跳转语句只是多此一举。
+</p>
+<h2>不合规示例</h2>
 <pre>
 function redundantJump(x) {
   if (x == 1) {
     console.log("x == 1");
-    return; // Noncompliant
+    return; // 不合规
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function redundantJump(x) {
   if (x == 1) {
@@ -17,8 +19,4 @@ function redundantJump(x) {
   }
 }
 </pre>
-<h2>Exceptions</h2>
-<p><code>break</code> and <code>return</code> inside <code>switch</code> statement are ignored, because they are often used for consistency.
-<code>continue</code> with label is also ignored, because label is usually used for clarity. Also a jump statement being a single statement in a block
-is ignored.</p>
 
