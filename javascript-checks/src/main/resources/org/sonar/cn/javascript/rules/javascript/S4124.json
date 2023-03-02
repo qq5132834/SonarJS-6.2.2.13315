@@ -1,5 +1,5 @@
 {
-  "title": "Constructors should not be declared inside interfaces",
+  "title": "不应在接口内声明构造函数",
   "type": "BUG",
   "status": "ready",
   "remediation": {
