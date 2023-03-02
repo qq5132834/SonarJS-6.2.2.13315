@@ -1,17 +1,17 @@
-<p>Unnecessarily verbose declarations and initializations make it harder to read the code, and should be simplified. Specifically, primitive
-(<code>number</code>, <code>string</code>, <code>boolean</code> and others) types should be omitted from variable and parameter declaration when they
-can be easily inferred from the initialized or defaulted value.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  <code>number</code>, <code>string</code>, <code>boolean</code> 等类型在声明变量和初始化时可以省略。不必要的冗长声明和初始化使代码更难阅读，应该加以简化。
+</p>
+<h2>不合规示例</h2>
 <pre>
-const n: number = 1; // Noncompliant, "number" can be omitted
+const n: number = 1; // 不合规，number 可以省略
 
-function foo(s: string = "") {} // Noncompliant, "string" can be omitted
+function foo(s: string = "") {} // 不合规，string 可以省略
 
 class Bar {
-  b: boolean = true;  // Noncompliant, "boolean" can be omitted
+  b: boolean = true;  // 不合规，boolean 可以省略
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 const n = 1;
 
