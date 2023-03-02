@@ -1,5 +1,5 @@
 {
-  "title": "The global \"this\" object should not be used",
+  "title": "全局 \"this\" 对象不应被使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
