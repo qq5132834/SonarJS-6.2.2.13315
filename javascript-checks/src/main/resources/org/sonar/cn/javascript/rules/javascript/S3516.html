@@ -1,9 +1,12 @@
-<p>When a function is designed to return an invariant value, it may be poor design, but it shouldn't adversely affect the outcome of your program.
-However, when it happens on all paths through the logic, it is likely a mistake.</p>
-<p>This rule raises an issue when a function contains several <code>return</code> statements that all return the same value.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  当一个函数被设计成返回一个不变的值时，它可能是一个有问题的设计，但它不应该对你的程序的结果产生不利影响。
+</p>
+<p>
+  当函数包含多个返回相同值的 <code>return</code> 语句时，此规则会引发问题。
+</p>
+<h2>不合规示例</h2>
 <pre>
-function foo(a) {  // Noncompliant
+function foo(a) {  // 不合规
   let b = 12;
   if (a) {
     return b;
