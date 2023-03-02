@@ -1,5 +1,5 @@
 {
-  "title": "\"await\" should only be used with promises",
+  "title": "\"await\" 应该与 \" Promise\" 搭配使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
