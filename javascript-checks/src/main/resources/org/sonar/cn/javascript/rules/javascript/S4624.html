@@ -1,15 +1,11 @@
-<p>Template literals (previously named "template strings") are an elegant way to build a string without using the <code>+</code> operator to make
-strings concatenation more readable. </p>
-<p>However, it's possible to build complex string literals by nesting together multiple template literals, and therefore lose readability and
-maintainability.</p>
-<p>In such situations, it's preferable to move the nested template into a separate statement.</p>
-<h2>Noncompliant Code Example</h2>
+<p>不应嵌套模板文字</p>
+<h2>不合规示例</h2>
 <pre>
 let color = "red";
 let count = 3;
-let message = `I have ${color ? `${count} ${color}` : count} apples`; // Noncompliant; nested template strings not easy to read
+let message = `I have ${color ? `${count} ${color}` : count} apples`; //不合规，难以理解嵌套
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 let color = "red";
 let count = 3;
