@@ -1,5 +1,5 @@
 {
-  "title": "Variables should be defined before being used",
+  "title": "变量应在使用前定义",
   "type": "BUG",
   "status": "ready",
   "remediation": {
