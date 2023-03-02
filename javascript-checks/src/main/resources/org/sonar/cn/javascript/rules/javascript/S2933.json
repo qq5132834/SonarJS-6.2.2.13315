@@ -1,5 +1,5 @@
 {
-  "title": "Private properties that are only assigned in the constructor or at declaration should be \"readonly\"",
+  "title": "readonly属性只能在类构造函数中或在声明时分配使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
