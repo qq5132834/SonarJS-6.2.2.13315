@@ -1,5 +1,5 @@
 {
-  "title": "Non-null assertions should not be used",
+  "title": "非空(!.操作)断言不应被使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
