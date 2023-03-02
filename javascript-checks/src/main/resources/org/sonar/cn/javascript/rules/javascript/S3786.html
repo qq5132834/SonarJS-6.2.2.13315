@@ -1,12 +1,13 @@
-<p>Template strings allow developers to embed variables or expressions in strings using template literals, instead of string concatenation. This is
-done by using expressions like <code>${variable} </code> in a string between two back-ticks (<code>`</code>). However, when used in a regular string
-literal (between double or single quotes) the template will not be evaluated and will be used as a literal, which is probably not what was
-intended.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  模板字符串允许开发人员使用模板文字而不是字符串连接在字符串中嵌入变量或表达式。
+  这是通过在两个反引号 (<code>`</code>) 之间的字符串中使用类似 <code>${variable} </code> 的表达式来完成的。
+  但是，当在常规字符串文字（双引号或单引号之间）中使用时，模板将不会被评估并将用作文字，这可能不是预期的。
+</p>
+<h2>不合规示例</h2>
 <pre>
-console.log("Today is ${date}"); // Noncompliant
+console.log("Today is ${date}"); // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 console.log(`Today is ${date}`);
 </pre>
