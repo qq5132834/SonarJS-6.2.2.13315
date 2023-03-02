@@ -1,5 +1,5 @@
 {
-  "title": "\"default\" clauses should be last",
+  "title": "\"default\" 子句应该在最后",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
