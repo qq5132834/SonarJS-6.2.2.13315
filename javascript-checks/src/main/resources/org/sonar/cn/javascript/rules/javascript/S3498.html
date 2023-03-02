@@ -1,17 +1,18 @@
-<p>When an already-defined variable is given the same name within a new object, object-shorthand syntax is preferred as being more compact. Similarly,
-object-shorthand is also preferred for the definition of functions in object literals.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  当已经定义的变量赋值给一个新对象的相同名称的属性时，应该简写语法，因为它更紧凑。
+</p>
+<h2>不合规示例</h2>
 <pre>
 let a = 1;
 
 let myObj = {
-  a : a,  // Noncompliant
-  fun: function () {  // Noncompliant
+  a : a,  // 不合规
+  fun: function () {  // 不合规
     //...
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 let a = 1;
 
