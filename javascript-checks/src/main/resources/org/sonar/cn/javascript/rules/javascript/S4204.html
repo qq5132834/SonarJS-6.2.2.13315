@@ -1,13 +1,13 @@
-<p>Variables can be declared with or without types. Variables declared without a type will be implicitly typed if the declaration includes an
-initialization, and compiler type checking will be automatically applied to any typed variable. But if you declare a variable with the
-<code>any</code> "type" then you've explicitly told the compiler not to do any type checking, which is risky. </p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  可以使用或不使用类型来声明变量。但是强烈不推荐使用 any 类型。
+</p>
+<h2>不合规示例</h2>
 <pre>
-let a = 42;  // implicitly typed to number
-let b: number = 42;  // explicitly typed to number
-let c: any = 42;  // Noncompliant
+let a = 42;  // 隐式输入为数字
+let b: number = 42;  // 显式输入数字
+let c: any = 42;  // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 let a = 42;
 let b: number = 42;
