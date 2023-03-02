@@ -1,14 +1,16 @@
-<p>If you have an iterable, such as an array, set, or list, your best option for looping through its values is the <code>for of</code> syntax. Use
-<code>for in</code> and you'll iterate the properties, rather than the values.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  如果您有一个可迭代对象，例如数组、集合或列表，则循环遍历其值的最佳选择是 <code>for of</code> 语法。
+  使用 <code>for in</code>，您将迭代属性，而不是值。
+</p>
+<h2>不合规示例</h2>
 <pre>
 const arr = [4, 3, 2, 1];
 
-for (let value in arr) {  // Noncompliant
+for (let value in arr) {  // 不合规
   console.log(value);  // logs 0, 1, 2, 3
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 const arr = [4, 3, 2, 1];
 

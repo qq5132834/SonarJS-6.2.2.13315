@@ -1,5 +1,5 @@
 {
-  "title": "\"for in\" should not be used with iterables",
+  "title": "\"for in\" 不应该与可迭代对象一起使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
