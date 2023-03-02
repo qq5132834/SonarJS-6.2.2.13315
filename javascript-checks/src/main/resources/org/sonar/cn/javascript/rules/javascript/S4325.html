@@ -1,20 +1,22 @@
-<p>The TypeScript compiler automatically casts a variable to the relevant type inside conditionals where it is possible to infer the type (because
-<code>typeof</code>, <code>instanceof</code>, etc was used). This compiler feature makes casts and not-<code>null</code> assertions unnecessary.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  TypeScript 编译器会自动将变量转换为可以推断类型的条件内的相关类型（因为使用了 <code>typeof</code>、<code>instanceof</code> 等）。
+  此编译器功能使转换和非空断言变得不必要。
+</p>
+<h2>不合规示例</h2>
 <pre>
 function getName(x?: string | UserName) {
   if (x) {
-    console.log("Getting name for " + x!); // Noncompliant
+    console.log("Getting name for " + x!); // 不合规
 
     if (typeof x === "string")
-      return (x as string); // Noncompliant
+      return (x as string); // 不合规
     else
-      return (x as UserName).name; // Noncompliant
+      return (x as UserName).name; // 不合规
   }
   return "NoName";
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function getName(x?: string | UserName) {
   if (x) {
