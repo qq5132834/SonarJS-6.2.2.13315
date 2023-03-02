@@ -1,5 +1,5 @@
 {
-  "title": "\"this\" should not be assigned to variables",
+  "title": "\"this\" 不应分配给变量",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
