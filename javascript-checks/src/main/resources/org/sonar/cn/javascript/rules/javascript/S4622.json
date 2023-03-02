@@ -1,5 +1,5 @@
 {
-  "title": "Union types should not have too many elements",
+  "title": "联合类型不应该有太多元素",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
