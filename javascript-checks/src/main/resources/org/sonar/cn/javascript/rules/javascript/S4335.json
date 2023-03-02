@@ -1,5 +1,5 @@
 {
-  "title": "Types without members, 'any' and 'never' should not be used in type intersections",
+  "title": "没有成员的类型， any 和 never 不应在类型交集中使用",
   "type": "BUG",
   "status": "ready",
   "remediation": {

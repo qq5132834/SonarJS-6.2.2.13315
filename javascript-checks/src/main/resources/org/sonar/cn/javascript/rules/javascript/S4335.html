@@ -1,18 +1,17 @@
-<p>An intersection type combines multiple types into one. This allows you to add together existing types to get a single type that has all the
-features you need. However an intersection with a type without members doesn't change the resulting type. In the opposite the usage of
-<code>any</code> or <code>never</code> as part of an intersection will always results in <code>any</code> or <code>never</code> respectively. This is
-almost certainly an error.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  没有成员的类型， any 和 never 不应在类型交集中使用
+</p>
+<h2>不合规示例</h2>
 <pre>
-function foo(p: MyType &amp; null) { // Noncompliant
+function foo(p: MyType &amp; null) { // 不合规
  // ...
 }
 
-function bar(p: MyType &amp; any) { // Noncompliant
+function bar(p: MyType &amp; any) { // 不合规
  // ...
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function foo(p: MyType | null) {
  // ...
