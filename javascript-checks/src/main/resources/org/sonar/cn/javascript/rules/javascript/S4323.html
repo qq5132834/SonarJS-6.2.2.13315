@@ -1,8 +1,9 @@
-<p>Union and intersection types are convenient but can make code harder to read and maintain. So if a particular union or intersection is used in
-multiple places, the use of a type alias is recommended.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  联合和交集类型很方便，但会使代码更难阅读和维护。 因此，如果在多个地方使用特定的并集或交集，建议使用类型别名。
+</p>
+<h2>不合规示例</h2>
 <pre>
-function foo(x:string|null|number) { // Noncompliant
+function foo(x:string|null|number) { // 不合规
   // ...
 }
 function bar(x:string|null|number) {
@@ -12,7 +13,7 @@ function zoo(): string|null|number {
   return null;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 type MyType = string | null | number;
 
