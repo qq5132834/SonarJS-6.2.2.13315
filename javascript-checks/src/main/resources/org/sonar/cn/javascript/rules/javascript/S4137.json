@@ -1,5 +1,5 @@
 {
-  "title": "Type assertions should use \"as\"",
+  "title": "类型断言应使用 \"as\"",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
