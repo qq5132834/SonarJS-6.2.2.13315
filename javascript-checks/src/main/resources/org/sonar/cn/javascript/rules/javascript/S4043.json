@@ -1,5 +1,5 @@
 {
-  "title": "Array-mutating methods should not be used misleadingly",
+  "title": "要谨慎使用数组变异方法",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

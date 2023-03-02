@@ -1,18 +1,21 @@
-<p>Many of JavaScript's <code>Array</code> methods return an altered version of the array while leaving the source array intact. <code>reverse</code>
-and <code>sort</code> do not fall into this category. Instead, they alter the source array <em>in addition to</em> returning the altered version,
-which is likely not what was intended.</p>
-<p>This rule raises an issue when the return values of these methods are assigned, which could lead maintainers to overlook the fact that the original
-value is altered.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  许多 JavaScript 的 <code>Array</code> 方法返回数组的更改版本，同时保持源数组不变。
+  <code>reverse</code> 和 <code>sort</code> 不属于这一类。
+  相反，除了返回更改后的版本之外，它们还更改了源数组，这可能不是预期的结果。
+</p>
+<p>
+  当分配这些方法的返回值时，此规则会引发一个问题，这可能导致维护人员忽略原始值已更改的事实。
+</p>
+<h2>不合规示例</h2>
 <pre>
-var b = a.reverse(); // Noncompliant
-var d = c.sort(); // Noncompliant
+var b = a.reverse(); // 不合规
+var d = c.sort(); // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
-var b = [...a].reverse();  // de-structure and create a new array, so reverse doesn't impact 'a'
+var b = [...a].reverse();  // 解构并创建一个新数组，因此反向不会影响 'a'
 a.reverse();
 
-c.sort(); // this sorts array in place
+c.sort(); // 这对数组进行排序
 </pre>
 
