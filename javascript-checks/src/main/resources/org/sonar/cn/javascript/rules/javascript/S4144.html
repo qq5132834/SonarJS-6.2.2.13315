@@ -1,6 +1,7 @@
-<p>When two functions have the same implementation, either it was a mistake - something else was intended - or the duplication was intentional, but
-may be confusing to maintainers. In the latter case, the code should be refactored.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  当两个函数具有相同的实现时，要么有意为之，要么是误操作。这种情况建议重构代码。
+</p>
+<h2>不合规示例</h2>
 <pre>
 function calculateCode() {
   doTheThing();
@@ -8,13 +9,13 @@ function calculateCode() {
   return code;
 }
 
-function getName() {  // Noncompliant
+function getName() {  // 不合规
   doTheThing();
   doOtherThing();
   return code;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function calculateCode() {
   doTheThing();
@@ -26,6 +27,6 @@ function getName() {
   return calculateCode();
 }
 </pre>
-<h2>Exceptions</h2>
-<p>Functions with fewer than 3 lines are ignored.</p>
+<h2>例外</h2>
+<p>F少于 3 行的函数将被忽略。</p>
 
