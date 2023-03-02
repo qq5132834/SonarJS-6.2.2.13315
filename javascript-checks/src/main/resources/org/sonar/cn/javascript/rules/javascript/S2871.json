@@ -1,5 +1,5 @@
 {
-  "title": "A compare function should be provided when using \"Array.prototype.sort()\"",
+  "title": "使用\"Array.prototype.sort()\"时应提供一个比较函数",
   "type": "BUG",
   "status": "ready",
   "remediation": {
