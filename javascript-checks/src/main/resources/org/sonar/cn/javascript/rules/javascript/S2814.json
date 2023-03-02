@@ -1,5 +1,5 @@
 {
-  "title": "Variables and functions should not be redeclared",
+  "title": "不应声明相同名称的变量和函数",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
