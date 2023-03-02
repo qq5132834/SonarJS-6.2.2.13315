@@ -1,5 +1,5 @@
 {
-  "title": "Union and intersection types should not be defined with duplicated elements",
+  "title": "不应使用重复元素定义并集和交集类型",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
