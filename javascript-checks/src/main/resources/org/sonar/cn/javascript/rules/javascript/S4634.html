@@ -1,13 +1,16 @@
-<p> When a <code>Promise</code> needs to only "resolve" or "reject", it's more efficient and readable to use the methods specially created for such
-use cases: <code>Promise.resolve(value)</code> and <code>Promise.reject(error)</code>.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  当 <code>Promise</code> 只需要 resolve 或 reject 时，
+  使用专门为此类用例创建的方法会更加高效和可读：
+  <code>Promise.resolve(value)</code> 和 <code>Promise.reject(error)</code>。
+</p>
+<h2>不合规示例</h2>
 <pre>
 let fulfilledPromise = new Promise(resolve =&gt; resolve(42));
 let rejectedPromise = new Promise(function(resolve, reject) {
   reject('fail');
 });
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 let fulfilledPromise = Promise.resolve(42);
 let rejectedPromise = Promise.reject('fail');
