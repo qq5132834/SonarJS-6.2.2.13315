@@ -1,5 +1,5 @@
 {
-  "title": "Primitive return types should be used",
+  "title": "应使用原始返回类型",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
