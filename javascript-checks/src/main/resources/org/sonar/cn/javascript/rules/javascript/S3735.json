@@ -1,5 +1,5 @@
 {
-  "title": "\"void\" should not be used",
+  "title": "\"void\" 不应使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
