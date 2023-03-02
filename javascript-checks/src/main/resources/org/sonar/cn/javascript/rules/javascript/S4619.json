@@ -1,5 +1,5 @@
 {
-  "title": "\"in\" should not be used on arrays",
+  "title": "\"in\" 不应该在数组中使用",
   "type": "BUG",
   "status": "ready",
   "remediation": {
