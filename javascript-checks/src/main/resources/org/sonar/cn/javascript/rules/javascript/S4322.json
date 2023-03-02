@@ -1,5 +1,5 @@
 {
-  "title": "Type guards should be used",
+  "title": "应该使用类型保护",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
