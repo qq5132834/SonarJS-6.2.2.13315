@@ -1,13 +1,15 @@
-<p>There's no reason to repeat a default type unless it is early in a list and other, non-default types come after it. Instead, leave it out and only
-supply type when it is something other than the default.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  没有理由重复默认类型，除非它在列表的前面并且其他非默认类型紧随其后。
+  取而代之的是，当它不是默认值时，将其排除在外并仅提供类型。
+</p>
+<h2>不合规示例</h2>
 <pre>
 function foo&lt;N = number, S = string&gt;() {}
-foo&lt;number, string&gt;();  // Noncompliant; both types redundant
-foo&lt;string, string&gt;();  // Noncompliant; 2nd string is redundant
-foo&lt;number, number&gt;();  // Ignored; number is redundant but required
+foo&lt;number, string&gt;();  // 不合规； 两种类型都是冗余的
+foo&lt;string, string&gt;();  // 不合规； 第二个字符串是多余的
+foo&lt;number, number&gt;();  // 忽略； 号码是多余的，但需要
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function foo&lt;N = number, S = string&gt;() {}
 foo();
