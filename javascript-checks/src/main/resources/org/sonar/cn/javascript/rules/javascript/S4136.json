@@ -1,5 +1,5 @@
 {
-  "title": "Method overloads should be grouped together",
+  "title": "方法重载应该组合在一起",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
