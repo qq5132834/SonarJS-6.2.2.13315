@@ -1,10 +1,10 @@
-<p>When a collection is populated but its contents are never used, then it is surely some kind of mistake. Either refactoring has rendered the
-collection moot, or an access is missing.</p>
-<p>This rule raises an issue when no methods are called on a collection other than those that add or remove values.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  当一个集合被填充但它的内容从未被使用时，这使集合变得毫无意义。
+</p>
+<h2>不合规示例</h2>
 <pre>
 function getLength(a, b, c) {
-  const strings = [];  // Noncompliant
+  const strings = [];  // 不合规
   strings.push(a);
   strings.push(b);
   strings.push(c);
@@ -12,7 +12,7 @@ function getLength(a, b, c) {
   return a.length + b.length + c.length;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function getLength(a, b, c) {
   return a.length + b.length + c.length;
