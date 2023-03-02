@@ -1,16 +1,16 @@
-<p>Expressions with arithmetic (<code>/, *, %, ++, --, -, -=, *=, /=, %=, +=, +</code>), unary (<code>-</code>), or comparison operators (<code>&gt;,
-&lt;, &gt;=, &lt;=</code>) where one, or both, of the operands is a String, Boolean or Date value rely on implicit conversions. Both the
-maintainability and reliability levels of such a piece of code are questionable.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  算术运算符应该只有数字作为操作数
+</p>
+<h2>不合规示例</h2>
 <pre>
 str = "80";
-quarter = str / 4; // Noncompliant
+quarter = str / 4; // 不合规
 
-if (str &lt; 10) { // Noncompliant
+if (str &lt; 10) { // 不合规
    // ...
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 str = "80";
 parsedStr = parseInt(str);
@@ -20,10 +20,3 @@ if (parsedStr &lt; 10) {
   // ...
 }
 </pre>
-<h2>Exceptions</h2>
-<ul>
-  <li> Expressions using the binary <code>+</code> operator with at least one <code>String</code> operand are ignored because the <code>+</code>
-  operator will perform a concatenation in that case. </li>
-  <li> Comparisons where both operands are strings are ignored because a lexicographical comparison is performed in that case. </li>
-</ul>
-
