@@ -1,5 +1,5 @@
 {
-  "title": "非空语句应更改控制流或至少有一个副作用",
+  "title": "语句应该具有副作用或改变控制流",
   "type": "BUG",
   "status": "ready",
   "remediation": {
