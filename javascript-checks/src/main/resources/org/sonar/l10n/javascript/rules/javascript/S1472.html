@@ -1,40 +1,44 @@
-<p>Because semicolons at the ends of statements are optional, starting function call arguments on a separate line makes the code confusing. It could
-lead to errors and most likely <em>will</em> lead to questions for maintainers.</p>
-<p>What was the initial intent of the developer?</p>
+<p>
+  因为语句末尾的分号是可选的，所以在单独的行上开始函数调用参数会使代码混乱。
+  它可能会导致错误，并且很可能会给维护者带来问题。
+</p>
+<p>
+  容易混淆开发者的真实意图
+</p>
 <ol>
-  <li> Define a function and then execute some unrelated code inside a closure ? </li>
-  <li> Pass the second function as a parameter to the first one ? </li>
+  <li> 定义一个函数然后在闭包中执行一些不相关的代码？ </li>
+  <li> 将第二个函数作为参数传递给第一个函数？</li>
 </ol>
-<p>The first option will be the one chosen by the JavaScript interpreter.</p>
-<p>By extension, and to improve readability, any kind of function call argument should not start on new line.</p>
-<h2>Noncompliant Code Example</h2>
+<p>第一个选项将由 JavaScript 解释器选择。</p>
+<p>通过扩展，为了提高可读性，任何类型的函数调用参数都不应该从新行开始。</p>
+<h2>不合规示例</h2>
 <pre>
 var fn = function () {
   //...
 }
 
-(function () { // Noncompliant
+(function () { // 不合规
   //...
 })();
 </pre>
-<h2>Compliant Solution</h2>
-<p>Either</p>
+<h2>合规示例</h2>
+<p>例1</p>
 <pre>
-// define a function
+// 定义一个函数
 var fn = function () {
   //...
-}; // &lt;-- semicolon added
+}; // &lt;-- 添加分号
 
-// then execute some code inside a closure
+// 然后在闭包中执行一些代码
 (function () {
   //...
 })();
 </pre>
-<p>Or </p>
+<p>例2</p>
 <pre>
 var fn = function () {
   //...
-}(function () { // &lt;-- start function call arguments on same line
+}(function () { // &lt;-- 在同一行启动函数调用参数
   //...
 })();
 </pre>

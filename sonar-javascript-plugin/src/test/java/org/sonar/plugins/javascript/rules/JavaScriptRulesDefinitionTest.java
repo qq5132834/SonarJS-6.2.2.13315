@@ -29,6 +29,8 @@ import org.sonar.api.server.rule.RulesDefinition.Repository;
 import org.sonar.api.server.rule.RulesDefinition.Rule;
 import org.sonar.javascript.checks.CheckList;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class JavaScriptRulesDefinitionTest {
@@ -47,8 +49,28 @@ public class JavaScriptRulesDefinitionTest {
   }
 
   @Test
+  public void showRules(){
+    RulesDefinition.Repository repository = buildRepository();
+    String name = repository.name();
+    String key = repository.key();
+    List<Rule> ruleList = repository.rules();
+    ruleList.stream().forEach(rule -> {
+      String desc = rule.gapDescription();
+      String ruleKey = rule.key();
+      String html = rule.htmlDescription();
+      String ruleName = rule.name();
+      String severity = rule.severity();
+      boolean bool = rule.activatedByDefault();
+      String iKey = rule.internalKey();
+      String type = rule.type().name();
+      System.out.println("");
+    });
+  }
+
+  @Test
   public void sonarlint() {
     RulesDefinition.Repository repository = buildRepository();
+
     assertThat(repository.rule("S909").activatedByDefault()).isFalse();
     assertThat(repository.rule("S930").activatedByDefault()).isTrue();
   }

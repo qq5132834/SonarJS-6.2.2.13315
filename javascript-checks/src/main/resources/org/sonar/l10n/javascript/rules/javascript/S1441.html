@@ -1,17 +1,16 @@
-<p>This rule checks that all string literals use the same kind of quotes.</p>
-<h2>Noncompliant Code Example</h2>
-<p>Using the parameter default (forcing single quotes):</p>
+<p>此规则检查所有字符串文字是否使用相同类型的引号。</p>
+<h2>不合规示例</h2>
+<p>使用参数默认值（强制单引号）：</p>
 <pre>
-var firstParameter = "something"; // Noncompliant
+var firstParameter = "something"; // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例/h2>
 <pre>
 var firstParameter = 'something';
 </pre>
-<h2>Exceptions</h2>
-<p>Strings that contain quotes are ignored.</p>
+<h2>例外</h2>
+<p>包含引号的字符串将被忽略。</p>
 <pre>
-let heSaid = "Then he said 'What?'."  // ignored
-let sheSaid = '"Whatever!" she replied.'  // ignored
+let heSaid = "Then he said 'What?'."  // 忽略
+let sheSaid = '"Whatever!" she replied.'  // 忽略
 </pre>
-

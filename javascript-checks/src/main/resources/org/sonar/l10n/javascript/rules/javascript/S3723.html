@@ -1,14 +1,12 @@
-<p>Modern browsers ignore unneeded, trailing commas, so there are no negatives to having them unless you're supporting an IE 8 application. Since they
-make adding new properties simpler, their use is preferred. This rule raises an issue when the last item in an object declaration or array declaration
-does not end with a trailing comma and does not lie on the same line as the closing curly brace or bracket.</p>
-<h2>Noncompliant Code Example</h2>
+<p>应使用尾随逗号</p>
+<h2>不合规示例</h2>
 <pre>
 var joe = {
   fname: "Joe",
-  lname: "Smith"      // Noncompliant
+  lname: "Smith"      // 不合规
 };
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 var joe = {
   fname: "Joe",

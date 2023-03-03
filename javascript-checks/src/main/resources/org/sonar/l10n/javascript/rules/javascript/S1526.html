@@ -1,20 +1,23 @@
-<p>Variables declared with <code>var</code> have the special property that regardless of where they're declared in a function they "float" to the top
-of the function and are available for use even before they're declared. That makes scoping confusing, especially for new coders. </p>
-<p>To keep confusion to a minimum, <code>var</code> declarations should happen before they are used for the first time.</p>
-<h2>Noncompliant Code Example</h2>
+<p>使用 <code>var</code> 声明的变量具有特殊属性，无论它们在函数中的何处声明，它们都会“浮动”到函数的顶部，甚至在声明之前就可以使用。
+  这使得范围界定变得混乱，尤其是对于新编码员而言。
+</p>
+<p>
+  为了将混淆降到最低，<code>var</code> 声明应该在它们第一次使用之前进行。
+</p>
+<h2>不合规示例</h2>
 <pre>
 var x = 1;
 
 function fun(){
-  alert(x); // Noncompliant as x is declared later in the same scope
+  alert(x); // 不合规，因为稍后在同一范围内声明了 x
   if(something) {
-    var x = 42; // Declaration in function scope (not block scope!) shadows global variable
+    var x = 42; // 函数范围内的声明（不是块范围！）隐藏全局变量
   }
 }
 
-fun(); // Unexpectedly alerts "undefined" instead of "1"
+fun(); // 警告是"undefined"而不是"1"
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 var x = 1;
 
@@ -25,6 +28,6 @@ function fun() {
   }
 }
 
-fun(); // Print "1"
+fun(); // 打印 "1"
 </pre>
 

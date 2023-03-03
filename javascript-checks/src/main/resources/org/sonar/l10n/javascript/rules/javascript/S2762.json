@@ -1,5 +1,5 @@
 {
-  "title": "Selections should be stored",
+  "title": "应存储所选内容",
   "type": "CODE_SMELL",
   "status": "deprecated",
   "remediation": {

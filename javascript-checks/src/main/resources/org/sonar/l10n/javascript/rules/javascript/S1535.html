@@ -1,15 +1,17 @@
-<p>The <code>for...in</code> statement allows you to loop through the names of all of the properties of an object. The list of properties includes all
-those properties that were inherited through the prototype chain. This has the side effect of serving up functions when the interest is in data
-properties. Programs that don't take this into account can fail.</p>
-<p>Therefore, the body of every <code>for...in</code> statement should be wrapped in an <code>if</code> statement that filters which properties are
-acted upon. It can select for a particular type or range of values, or it can exclude functions, or it can exclude properties from the prototype. </p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  <code>for...in</code> 语句允许您遍历一个对象的所有属性的名称。
+</p>
+<p>
+  因此，每个 <code>for...in</code> 语句的主体都应该包含在一个 <code>if</code> 语句中，该语句过滤对哪些属性进行操作。
+  它可以选择特定类型或值范围，也可以排除函数，或者从原型中排除属性。
+</p>
+<h2>不合规示例</h2>
 <pre>
 for (name in object) {
-    doSomething(name);  // Noncompliant
+    doSomething(name);  // 不合规
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 for (name in object) {
   if (object.hasOwnProperty(name)) {
@@ -17,11 +19,11 @@ for (name in object) {
   }
 }
 </pre>
-<h2>Exceptions</h2>
-<p>Loops used to clone objects are ignored.</p>
+<h2>例外</h2>
+<p>用于克隆对象的循环将被忽略。</p>
 <pre>
 for (prop in obj) {
-  a[prop] = obj[prop];  // Compliant by exception
+  a[prop] = obj[prop];  // 例外合规
 }
 </pre>
 

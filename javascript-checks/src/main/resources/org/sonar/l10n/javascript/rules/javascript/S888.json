@@ -1,5 +1,5 @@
 {
-  "title": "Equality operators should not be used in \"for\" loop termination conditions",
+  "title": "等式运算符不应用于\"for\"循环终止条件",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

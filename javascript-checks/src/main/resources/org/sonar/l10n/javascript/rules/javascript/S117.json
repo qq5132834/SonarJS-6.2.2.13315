@@ -1,5 +1,5 @@
 {
-  "title": "Variable, property and parameter names should comply with a naming convention",
+  "title": "变量、属性和参数名称应符合命名规范",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

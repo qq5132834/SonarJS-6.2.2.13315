@@ -1,5 +1,5 @@
 {
-  "title": "\"undefined\" should not be passed as the value of optional parameters",
+  "title": "\"undefined\" 不应作为可选参数的值传递",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

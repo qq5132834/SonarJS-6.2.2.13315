@@ -1,5 +1,5 @@
 {
-  "title": "Shorthand promises should be used",
+  "title": "Promise使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "tags": [

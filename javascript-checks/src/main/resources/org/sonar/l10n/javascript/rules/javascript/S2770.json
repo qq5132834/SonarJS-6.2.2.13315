@@ -1,5 +1,5 @@
 {
-  "title": "Deprecated jQuery methods should not be used",
+  "title": "丢弃的 jQuery 方法不应被使用",
   "type": "CODE_SMELL",
   "status": "deprecated",
   "remediation": {

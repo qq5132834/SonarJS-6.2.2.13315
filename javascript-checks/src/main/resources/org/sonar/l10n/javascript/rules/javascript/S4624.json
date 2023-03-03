@@ -1,5 +1,5 @@
 {
-  "title": "Template literals should not be nested",
+  "title": "不应嵌套模板文字",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

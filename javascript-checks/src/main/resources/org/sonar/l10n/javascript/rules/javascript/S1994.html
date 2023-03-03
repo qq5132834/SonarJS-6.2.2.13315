@@ -1,13 +1,15 @@
-<p>It can be extremely confusing when a <code>for</code> loop's counter is incremented outside of its increment clause. In such cases, the increment
-should be moved to the loop's increment clause if at all possible.</p>
+<p>
+  当<code>for</code>循环的计数器在其增量子句之外递增时，会非常令人困惑。
+  在这种情况下，如果可能的话，应该将增量移到循环的增量子句中。
+</p>
 <h2>Noncompliant Code Example</h2>
 <pre>
-for (i = 0; i &lt; 10; j++) { // Noncompliant
+for (i = 0; i &lt; 10; j++) { // 不合规
   // ...
   i++;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 for (i = 0; i &lt; 10; i++, j++) {
   // ...

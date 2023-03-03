@@ -1,22 +1,20 @@
-<p>The comma operator (<code>,</code>) evaluates its operands, from left to right, and returns the second one. That's useful in some situations, but
-just wrong in a <code>switch</code> <code>case</code>. You may think you're compactly handling multiple values in the case, but only the last one in
-the comma-list will ever be handled. The rest will fall through to the default.</p>
-<p>Similarly the logical OR operator (<code>||</code>) will not work in a <code>switch</code> <code>case</code>, only the first argument will be
-considered at execution time.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  逗号和逻辑 OR 运算符不应在 switch case 中使用
+</p>
+<h2>不合规示例</h2>
 <pre>
 switch a {
-  case 1,2:  // Noncompliant; only 2 is ever handled by this case
+  case 1,2:  // 不合规，仅仅处理case 2情况
     doTheThing(a);
-  case 3 || 4: // Noncompliant; only '3' is handled
+  case 3 || 4: // 不合规，仅仅处理case 3情况
     doThatThing(a);
   case 5:
     doTheOtherThing(a);
   default:
-    console.log("Neener, neener!");  // this happens when a==1 or a == 4
+    console.log("Neener, neener!");  //在a==1或4时会执行
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 switch a {
   case 1:

@@ -1,5 +1,5 @@
 {
-  "title": "Primitive types should be omitted from initialized or defaulted declarations",
+  "title": "Primitive types should be omitted from initialized or defaulted declarations 应从初始化中省略原始类型",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

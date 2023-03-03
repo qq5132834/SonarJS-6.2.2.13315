@@ -1,17 +1,18 @@
-<p><code>readonly</code> properties can only be assigned in a class constructor or at the point of declaration. If a class has a property that's not
-marked <code>readonly</code> but is only set in the constructor, it could cause confusion about the property's intended use. To avoid confusion, such
-properties should be marked <code>readonly</code> to make their intended use explicit, and to prevent future maintainers from inadvertently changing
-their use.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  <code>readonly</code> 属性只能在类构造函数中或在声明时分配使用。
+  如果类的属性未标记为<code>readonly</code>，但仅在构造函数中设置，则可能会导致该属性的预期用途模糊不清晰。
+  为避免混淆，此类属性应标记为<code>readonly</code>，以明确其预期用途，并防止未来维护人员无意中更改其用途。
+</p>
+<h2>不合规示例</h2>
 <pre>
 class Person {
-  private _birthYear: number;  // Noncompliant
+  private _birthYear: number;  // 不合规
   constructor(birthYear: number) {
     this._birthYear = birthYear;
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 class Person {
   private readonly _birthYear: number;

@@ -1,10 +1,8 @@
-<p>Assigning <code>this</code> to a local variable is a way to reference parent context inside inner functions. In TypeScript when using arrow
-functions this happens automatically.</p>
-<p>This rule raises an issue when <code>this</code> is assigned to a local variable.</p>
-<h2>Noncompliant Code Example</h2>
+<p>当将 <code>this</code> 分配给局部变量时，此规则会引发问题。</p>
+<h2>不合规示例</h2>
 <pre>
 function Foo() {
-  let that = this;  // Noncompliant
+  let that = this;  // 不合规
   that.val = 0;
 
   setInterval(function() {
@@ -12,7 +10,7 @@ function Foo() {
   }, 1000);
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function Foo() {
   this.val = 0;
@@ -22,8 +20,8 @@ function Foo() {
   }, 1000);
 }
 </pre>
-<h2>Exceptions</h2>
-<p>This rule ignores <code>this</code> used for destructuring.</p>
+<h2>例外</h2>
+<p>此规则忽略用于解构的 <code>this</code>。</p>
 <pre>
 const { foo, bar } = this;
 </pre>

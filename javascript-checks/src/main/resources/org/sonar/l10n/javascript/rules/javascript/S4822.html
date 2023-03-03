@@ -1,28 +1,28 @@
-<p>An exception (including <code>reject</code>) thrown by a promise will not be caught be a nesting <code>try</code> block, due to the asynchronous
-nature of execution. Instead, use <code>catch</code> method of <code>Promise</code> or wrap it inside <code>await</code> expression.</p>
-<p>Rule reports <code>try-catch</code> statements containing nothing else but call(s) to a function returning <code>Promise</code> (thus it's less
-likely that <code>catch</code> is intended to catch something else than <code>Promise</code> rejection).</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  由于执行的异步性质，由 promise 抛出的异常（包括 <code>reject</code>）不会被嵌套的 <code>try</code> 块捕获。
+  相反，使用 <code>Promise</code> 的 <code>catch</code> 方法或将其包装在 <code>await</code> 表达式中。
+</p>
+<h2>不合规示例</h2>
 <pre>
 function runPromise() {
   return Promise.reject("rejection reason");
 }
 
 function foo() {
-  try { // Noncompliant, the catch clause of the 'try' will not be executed for the code inside promise
+  try { // 不合规，promise 中的代码不会执行 'try' 的 catch 子句
     runPromise();
   } catch (e) {
     console.log("Failed to run promise", e);
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function foo() {
   runPromise().catch(e =&gt; console.log("Failed to run promise", e));
 }
 
-// or
+// 或
 async function foo() {
   try {
     await runPromise();

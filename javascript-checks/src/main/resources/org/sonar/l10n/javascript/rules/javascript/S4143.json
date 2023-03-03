@@ -1,5 +1,5 @@
 {
-  "title": "Collection elements should not be replaced unconditionally",
+  "title": "集合元素不应被无条件替换",
   "type": "BUG",
   "status": "ready",
   "remediation": {

@@ -1,5 +1,5 @@
 {
-  "title": "Track lack of copyright and license headers",
+  "title": "版权和许可证申明缺失",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

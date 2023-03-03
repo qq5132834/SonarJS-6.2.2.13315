@@ -1,15 +1,16 @@
-<p>A <code>catch</code> clause that only rethrows the caught exception has the same effect as omitting the <code>catch</code> altogether and letting
-it bubble up automatically, but with more code and the additional detriment of leaving maintainers scratching their heads. </p>
-<p>Such clauses should either be eliminated or populated with the appropriate logic.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  一个只重新抛出捕获的异常的<code>catch</code>子句，其效果与完全省略<code>catch</code>并让它自动冒泡一样，但代码更多，维护人员也会头疼。
+</p>
+<p>此类子句应被删除或填充适当的逻辑。</p>
+<h2>不合规示例</h2>
 <pre>
 try {
   doSomething();
-} catch (ex) {  // Noncompliant
+} catch (ex) {  // 不合规
   throw ex;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 try {
   doSomething();
@@ -18,7 +19,7 @@ try {
   throw ex;
 }
 </pre>
-<p>or</p>
+<p>或</p>
 <pre>
 doSomething();
 </pre>

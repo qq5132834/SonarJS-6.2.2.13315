@@ -1,5 +1,5 @@
 {
-  "title": "Selection results should be tested with \"length\"",
+  "title": "应使用\"length\"测试选择结果",
   "type": "BUG",
   "status": "deprecated",
   "remediation": {

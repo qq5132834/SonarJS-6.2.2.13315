@@ -1,5 +1,5 @@
 {
-  "title": "Destructuring syntax should be used for assignments",
+  "title": "应使用解构语法进行赋值",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

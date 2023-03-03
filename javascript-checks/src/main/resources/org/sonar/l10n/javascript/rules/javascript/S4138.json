@@ -1,5 +1,5 @@
 {
-  "title": "\"for of\" should be used with Iterables",
+  "title": " for of 应该与可迭代对象一起使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

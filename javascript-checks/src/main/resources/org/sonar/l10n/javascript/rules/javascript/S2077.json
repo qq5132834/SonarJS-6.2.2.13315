@@ -1,5 +1,5 @@
 {
-  "title": "Formatting SQL queries is security-sensitive",
+  "title": "格式化SQL查询是安全敏感的",
   "type": "SECURITY_HOTSPOT",
   "status": "ready",
   "remediation": {

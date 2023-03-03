@@ -1,5 +1,5 @@
 {
-  "title": "Increment (++) and decrement (--) operators should not be used in a method call or mixed with other operators in an expression",
+  "title": "方法调用或与其他算术运算符组合中使用递增和递减运算符",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

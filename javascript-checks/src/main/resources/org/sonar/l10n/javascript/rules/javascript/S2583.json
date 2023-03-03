@@ -1,5 +1,5 @@
 {
-  "title": "Conditionally executed blocks should be reachable",
+  "title": "应访问有条件执行的块",
   "type": "BUG",
   "status": "deprecated",
   "remediation": {

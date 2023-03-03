@@ -1,5 +1,5 @@
 {
-  "title": "Default type parameters should be omitted",
+  "title": "应省略默认类型参数",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

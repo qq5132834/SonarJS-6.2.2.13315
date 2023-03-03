@@ -1,5 +1,5 @@
 {
-  "title": "\"delete\" should not be used on arrays",
+  "title": "\"delete\" 不应在数组上使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

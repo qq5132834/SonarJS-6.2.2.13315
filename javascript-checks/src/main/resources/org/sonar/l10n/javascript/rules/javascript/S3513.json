@@ -1,5 +1,5 @@
 {
-  "title": "\"arguments\" should not be accessed directly",
+  "title": "函数未显示申明的参数不应直接访问",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

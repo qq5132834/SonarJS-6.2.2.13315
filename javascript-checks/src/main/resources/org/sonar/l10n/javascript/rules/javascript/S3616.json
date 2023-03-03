@@ -1,5 +1,5 @@
 {
-  "title": "Comma and logical OR operators should not be used in switch cases",
+  "title": "逗号和逻辑 OR 运算符不应在 switch case 中使用",
   "type": "BUG",
   "status": "ready",
   "remediation": {

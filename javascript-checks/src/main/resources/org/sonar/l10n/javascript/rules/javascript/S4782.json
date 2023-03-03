@@ -1,5 +1,5 @@
 {
-  "title": "Optional property declarations should not use both '?' and 'undefined' syntax",
+  "title": "可选属性声明不应同时使用“?” 和“undefined”语法",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

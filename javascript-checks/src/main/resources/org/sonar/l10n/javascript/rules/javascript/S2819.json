@@ -1,5 +1,5 @@
 {
-  "title": "Cross-document messaging domains should be carefully restricted",
+  "title": "跨文档消息传递域应谨慎限制",
   "type": "SECURITY_HOTSPOT",
   "status": "ready",
   "remediation": {

@@ -1,5 +1,5 @@
 {
-  "title": "Non-empty statements should change control flow or have at least one side-effect",
+  "title": "语句应该具有副作用或改变控制流",
   "type": "BUG",
   "status": "ready",
   "remediation": {

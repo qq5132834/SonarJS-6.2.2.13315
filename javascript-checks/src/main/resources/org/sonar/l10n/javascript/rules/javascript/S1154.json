@@ -1,5 +1,5 @@
 {
-  "title": "Results of operations on strings should not be ignored",
+  "title": "不应忽略对字符串的操作结果",
   "type": "BUG",
   "status": "deprecated",
   "remediation": {

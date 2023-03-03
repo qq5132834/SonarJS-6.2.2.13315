@@ -1,13 +1,17 @@
-<p>A common idiom in JavaScript to differentiate between two possible types is to check for the presence in the object of a member of the desired
-type. Usually, to simplify the code, a boolean function is created to check the type.</p>
-<p>Typescript provides user defined type guard functions. These are just functions with a return type of <code>argumentName is SomeType</code>. Such
-functions return <code>true</code> if the argument is of the specified type. One of the advantages of using such a function is that in a conditional
-block where the condition is a type guard, the compiler automatically performs the appropriate casts, so explicit casting becomes unnecessary.</p>
-<p>This rule raises an issue when a boolean function checking for the type of its only argument can be replaced with a user-defined type guard
-function.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  JavaScript 中区分两种可能类型的常用习惯是检查对象中是否存在所需类型的成员。 通常，为了简化代码，会创建一个布尔函数来检查类型。
+</p>
+<p>
+  Typescript 提供了用户定义的类型保护函数。 这些只是返回类型为 <code>argumentName is SomeType</code> 的函数。
+  如果参数是指定类型，则此类函数返回 <code>true</code>。
+  使用此类函数的优点之一是，在条件是类型保护的条件块中，编译器会自动执行适当的强制转换，因此不需要显式强制转换。
+</p>
+<p>
+  当检查其唯一参数类型的布尔函数可以用用户定义的类型保护函数替换时，此规则会引发一个问题。
+</p>
+<h2>不合规示例</h2>
 <pre>
-function isSomething(x: BaseType) : boolean { // Noncompliant
+function isSomething(x: BaseType) : boolean { // 不合规
   return (&lt;Something&gt;x).foo !== undefined;
 }
 
@@ -15,7 +19,7 @@ if (isSomething(v)) {
   (&lt;Something&gt;v).foo();
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function isSomething(x: BaseType) : x is Something {
   return (&lt;Something&gt;x).foo !== undefined;
@@ -25,6 +29,6 @@ if (isSomething(v)) {
   v.foo();
 }
 </pre>
-<h2>See</h2>
-<p><a href="https://www.typescriptlang.org/docs/handbook/advanced-types.html">TypeScript advanced types</a></p>
+<h2>参考</h2>
+<p><a href="https://www.typescriptlang.org/docs/handbook/advanced-types.html">TypeScript 高级类型</a></p>
 

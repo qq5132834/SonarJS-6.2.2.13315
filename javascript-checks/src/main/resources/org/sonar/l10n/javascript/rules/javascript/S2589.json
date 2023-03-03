@@ -1,5 +1,5 @@
 {
-  "title": "Boolean expressions should not be gratuitous",
+  "title": "布尔表达式不应是多余的",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

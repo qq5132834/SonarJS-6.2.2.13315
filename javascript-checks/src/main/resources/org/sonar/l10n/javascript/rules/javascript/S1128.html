@@ -1,12 +1,12 @@
-<p>There's no reason to import modules you don't use; and every reason not to: doing so needlessly increases the load.</p>
-<h2>Noncompliant Code Example</h2>
+<p>应删除不必要的导入，不然会增加代码运行的负载。</p>
+<h2>不合规示例</h2>
 <pre>
-import A from 'a';      // Noncompliant, A isn't used
+import A from 'a';      // 不合规, A 没有被使用
 import { B1 } from 'b';
 
 console.log(B1);
 </pre>
-<h2>Compliant Solution</h2>
+<h2>不合规示例</h2>
 <pre>
 import { B1 } from 'b';
 

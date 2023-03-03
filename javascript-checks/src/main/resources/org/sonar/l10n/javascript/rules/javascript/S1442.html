@@ -1,15 +1,10 @@
-<p><code>alert(...)</code> as well as <code>confirm(...)</code> and <code>prompt(...)</code> can be useful for debugging during development, but in
-production mode this kind of pop-up could expose sensitive information to attackers, and should never be displayed. </p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  <code>alert(...)</code> 、 <code>confirm(...)</code> 和 <code>prompt(...)</code> 常使用在开发过程中debug中，
+  但在生产模式下，这种弹出窗口可能会将敏感信息暴露给攻击者，因此永远不应显示。
+</p>
+<h2>不合规示例</h2>
 <pre>
 if(unexpectedCondition) {
   alert("Unexpected Condition");
 }
 </pre>
-<h2>See</h2>
-<ul>
-  <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A3-Sensitive_Data_Exposure">OWASP Top 10 2017 Category A3</a> - Sensitive Data Exposure
-  </li>
-  <li> <a href="http://cwe.mitre.org/data/definitions/489.html">MITRE, CWE-489</a> - Leftover Debug Code </li>
-</ul>
-

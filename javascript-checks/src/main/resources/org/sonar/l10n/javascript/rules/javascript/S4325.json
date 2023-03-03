@@ -1,5 +1,5 @@
 {
-  "title": "Redundant casts and not-null assertions should be avoided",
+  "title": "应避免冗余强制转换和非空断言",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

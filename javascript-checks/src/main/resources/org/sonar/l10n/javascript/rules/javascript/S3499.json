@@ -1,5 +1,5 @@
 {
-  "title": "Shorthand object properties should be grouped at the beginning or end of an object declaration",
+  "title": "速记对象属性应该在对象声明的开头或结尾分组",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

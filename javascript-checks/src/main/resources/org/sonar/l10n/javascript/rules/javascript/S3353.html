@@ -1,9 +1,10 @@
-<p>Marking a variable that is unchanged after initialization <code>const</code> is an indication to future maintainers that "no this isn't updated,
-and it's not supposed to be". <code>const</code> should be used in these situations in the interests of code clarity.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  为了代码清晰起见，不更新的变量应标记为 <code>const</code>。
+</p>
+<h2>不合规示例</h2>
 <pre>
 function seek(input) {
-  let target = 32;  // Noncompliant
+  let target = 32;  // 不合规
   for (let i of input) {
     if (i == target) {
       return true;
@@ -13,12 +14,12 @@ function seek(input) {
 }
 
 function getUrl(query) { &nbsp;&nbsp;&nbsp;
-  let&nbsp;url; // Noncompliant
+  let&nbsp;url; // 不合规
   url = "http://example.com";
   return url;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function seek(input) {
   const target = 32;

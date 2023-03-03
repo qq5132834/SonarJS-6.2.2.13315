@@ -1,10 +1,12 @@
-<p>Multiple imports from the same module should be merged together to improve readability.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  来自同一个模块的多个导入应该合并在一起以提高可读性。
+</p>
+<h2>不合规示例</h2>
 <pre>
 import { B1 } from 'b';
-import { B2 } from 'b'; // Noncompliant
+import { B2 } from 'b'; // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 import { B1, B2 } from 'b';
 </pre>

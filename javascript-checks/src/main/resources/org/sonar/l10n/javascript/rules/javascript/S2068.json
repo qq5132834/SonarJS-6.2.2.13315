@@ -1,5 +1,5 @@
 {
-  "title": "Hard-coded credentials are security-sensitive",
+  "title": "硬编码凭据对安全性敏感",
   "type": "SECURITY_HOTSPOT",
   "status": "ready",
   "remediation": {

@@ -1,13 +1,10 @@
-<p>Any statement (other than a null statement, which means a statement containing only a semicolon <code>;</code>) which has no side effect and does
-not result in a change of control flow will normally indicate a programming error, and therefore should be refactored.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  任何没有副作用且不会导致控制流更改的语句通常都会指示编程错误，因此应进行重构。
+</p>
+<h2>不合规示例</h2>
 <pre>
-a == 1; // Noncompliant; was assignment intended?
+a == 1; // 不合规; 意义是什么？
 var msg = "Hello, "
-  "World!"; // Noncompliant; have we forgotten '+' operator on previous line?
+  "World!"; // 不合规; 前一行是否忘记需要添加 “+”
 </pre>
-<h2>See</h2>
-<ul>
-  <li> <a href="http://cwe.mitre.org/data/definitions/482">MITRE, CWE-482</a> - Comparing instead of Assigning </li>
-</ul>
 

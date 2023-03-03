@@ -1,5 +1,5 @@
 {
-  "title": "\"super()\" should be invoked appropriately",
+  "title": "\"super()\" 应适当调用",
   "type": "BUG",
   "status": "ready",
   "remediation": {

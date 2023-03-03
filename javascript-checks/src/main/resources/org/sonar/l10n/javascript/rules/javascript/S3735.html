@@ -1,20 +1,18 @@
-<p>The <code>void</code> operator evaluates its argument and unconditionally returns <code>undefined</code>. It can be useful in pre-ECMAScript 5
-environments, where <code>undefined</code> could be reassigned, but generally, its use makes code harder to understand.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  <code>void</code> 运算符计算其参数并无条件返回 <code>undefined</code>。
+  它在 ECMAScript 5 之前的环境中很有用，其中 <code>undefined</code> 可以重新分配，但通常，它的使用会使代码更难理解。
+</p>
+<h2>不合规示例</h2>
 <pre>
 void (function() {
    ...
 }());
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 (function() {
    ...
 }());
 </pre>
-<h2>Exceptions</h2>
-<p>No issue is raised when <code>void 0</code> is used in place of <code>undefined</code>. </p>
-<pre>
-if (parameter === void 0) {...}
-</pre>
+
 

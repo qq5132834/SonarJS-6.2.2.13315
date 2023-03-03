@@ -1,5 +1,5 @@
 {
-  "title": "Type aliases should be used",
+  "title": "应该使用类型别名",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

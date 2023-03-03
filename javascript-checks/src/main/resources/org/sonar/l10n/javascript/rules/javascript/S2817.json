@@ -1,5 +1,5 @@
 {
-  "title": "Web SQL databases should not be used",
+  "title": "Web SQL 数据库不应被使用",
   "type": "VULNERABILITY",
   "status": "ready",
   "remediation": {

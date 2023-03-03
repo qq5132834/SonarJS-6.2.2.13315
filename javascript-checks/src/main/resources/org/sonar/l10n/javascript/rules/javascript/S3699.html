@@ -1,6 +1,8 @@
-<p>If a function does not return anything, it makes no sense to use its output. Specifically, passing it to another function, or assigning its
-"result" to a variable is probably a bug because such functions return <code>undefined</code>, which is probably not what was intended.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  如果一个函数不返回任何东西，那么使用它的输出就没有意义。
+  具体来说，将没有返回值的函数分配给一个变量是一个错误，因为此类函数返回 <code>undefined</code>。
+</p>
+<h2>不合规示例</h2>
 <pre>
 function foo() {
   console.log("Hello, World!");
@@ -8,7 +10,7 @@ function foo() {
 
 a = foo();
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 function foo() {
   console.log("Hello, World!");

@@ -1,27 +1,22 @@
-<p>There are situations where <code>super()</code> must be invoked and situations where <code>super()</code> cannot be invoked.</p>
-<p>The basic rule is: a constructor in a non-derived class cannot invoke <code>super()</code>; a constructor in a derived class must invoke
-<code>super()</code>.</p>
-<p>Furthermore:</p>
-<p>- <code>super()</code> must be invoked before the <code>this</code> and <code>super</code> keywords can be used.</p>
-<p>- <code>super()</code> must be invoked with the same number of arguments as the base class' constructor.</p>
-<p>- <code>super()</code> can only be invoked in a constructor - not in any other method.</p>
-<p>- <code>super()</code> cannot be invoked multiple times in the same constructor.</p>
-<h3>Known Limitations</h3>
-<ul>
-  <li> False negatives: some issues are not raised if the base class is not defined in the same file as the current class. </li>
-</ul>
-<h2>Noncompliant Code Example</h2>
+<p>
+  存在必须调用 <code>super()</code> 的情况和不能调用 <code>super()</code> 的情况。
+</p>
+<p>
+  基本规则是：非派生类中的构造函数不能调用 <code>super()</code>； 派生类中的构造函数必须调用 <code>super()</code>。
+</p>
+
+<h2>不合规示例</h2>
 <pre>
 class Dog extends Animal {
   constructor(name) {
     super();
     this.name = name;
-    super();         // Noncompliant
+    super();         // 不合规
     super.doSomething();
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 class Dog extends Animal {
   constructor(name) {

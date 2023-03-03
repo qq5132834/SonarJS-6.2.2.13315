@@ -1,5 +1,5 @@
 {
-  "title": "Extra semicolons should be removed",
+  "title": "应删除多余的分号",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

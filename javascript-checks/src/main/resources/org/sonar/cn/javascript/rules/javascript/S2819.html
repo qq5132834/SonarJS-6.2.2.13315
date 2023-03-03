@@ -1,9 +1,0 @@
-<p>
-  HTML5增加了向其他域提供的文档发送消息的能力。但是这种能力要谨慎使用。
-</p>
-<h2>不合规示例</h2>
-<pre>
-var myWindow = document.getElementById('myIFrame').contentWindow;
-myWindow.postMessage(message, "*"); // 不合规；如何判断 myIFrame 中加载的内容仍然存在？
-</pre>
-

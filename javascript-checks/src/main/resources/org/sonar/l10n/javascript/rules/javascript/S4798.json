@@ -1,5 +1,5 @@
 {
-  "title": "Optional boolean parameters should have default value",
+  "title": "可选的布尔参数应该有默认值",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

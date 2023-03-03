@@ -1,7 +1,6 @@
-<p>Return of boolean literal statements wrapped into <code>if-then-else</code> ones should be simplified. </p>
-<p>Note that if the result of the expression is not a boolean but for instance an integer, then double negation should be used for proper
-conversion.</p>
-<h2>Noncompliant Code Example</h2>
+<p>返回包含在 <code>if-then-else</code> 中的布尔文字语句应该被简化。 </p>
+<p>请注意，如果表达式的结果不是布尔值而是整数，则应使用双重否定来进行正确的转换。</p>
+<h2>不合规示例</h2>
 <pre>
 if (expression) {
   return true;
@@ -9,11 +8,11 @@ if (expression) {
   return false;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 return expression;
 </pre>
-<p>or </p>
+<p>或者 </p>
 <pre>
 return !!expression;
 </pre>

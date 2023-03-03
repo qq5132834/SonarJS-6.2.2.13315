@@ -1,5 +1,5 @@
 {
-  "title": "Using pseudorandom number generators (PRNGs) is security-sensitive",
+  "title": "使用伪随机数发生器（PRNG）是安全敏感的",
   "type": "SECURITY_HOTSPOT",
   "status": "ready",
   "remediation": {

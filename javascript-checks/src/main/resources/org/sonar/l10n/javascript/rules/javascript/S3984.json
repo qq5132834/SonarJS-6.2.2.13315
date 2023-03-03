@@ -1,5 +1,5 @@
 {
-  "title": "Errors should not be created without being thrown",
+  "title": "错误不应在未被抛出的情况下产生",
   "type": "BUG",
   "status": "ready",
   "remediation": {

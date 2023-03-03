@@ -1,9 +1,11 @@
-<p>It is needlessly complex to invert the result of a boolean comparison. The opposite comparison should be made instead.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  反转布尔的比较结果是不必要。
+</p>
+<h2>不合规示例</h2>
 <pre>
-if (!(a === 2)) { ... }  // Noncompliant
+if (!(a === 2)) { ... }  // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 if (a !== 2) { ... }
 </pre>

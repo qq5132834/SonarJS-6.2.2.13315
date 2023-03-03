@@ -1,19 +1,20 @@
-<p><code>NaN</code> is not equal to anything, even itself. Testing for equality or inequality against <code>NaN</code> will yield predictable results,
-but probably not the ones you want. </p>
-<p>Instead, the best way to see whether a variable is equal to <code>NaN</code> is to use <code>Number.isNaN()</code>, since ES2015, or (perhaps
-counter-intuitively) to compare it to itself. Since <code>NaN !== NaN</code>, when <code>a !== a</code>, you know it must equal <code>NaN</code>.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  <code>NaN</code>不等于任何东西，甚至不等于它本身。
+  根据<code>NaN</code>测试相等或不相等将产生可预测的结果，但可能不是您想要的结果。
+</p>
+
+<h2>不合规示例</h2>
 <pre>
 var a = NaN;
 
-if (a === NaN) {  // Noncompliant; always false
-  console.log("a is not a number");  // this is dead code
+if (a === NaN) {  // 不合规；总是false
+  console.log("a is not a number");  // 这是死代码
 }
-if (a !== NaN) { // Noncompliant; always true
-  console.log("a is not NaN"); // this statement is not necessarily true
+if (a !== NaN) { // 不合规，总是为true
+  console.log("a is not NaN"); // 这条语句不一定是true
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 if (Number.isNaN(a)) {
   console.log("a is not a number");
@@ -22,8 +23,3 @@ if (!Number.isNaN(a)) {
   console.log("a is not NaN");
 }
 </pre>
-<h2>See</h2>
-<ul>
-  <li> <a href="https://www.securecoding.cert.org/confluence/x/7AEqAQ">CERT, NUM07-J.</a> - Do not attempt comparisons with NaN </li>
-</ul>
-

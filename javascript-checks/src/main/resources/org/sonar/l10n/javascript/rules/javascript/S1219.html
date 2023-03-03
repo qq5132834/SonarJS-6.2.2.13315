@@ -1,18 +1,17 @@
-<p>Even if it is legal, mixing case and non-case labels in the body of a switch statement is very confusing and can even be the result of a typing
-error.</p>
-<h2>Noncompliant Code Example</h2>
-<p>Case 1, the code is syntactically correct but the behavior is not the expected one</p>
+<p>switch 语句不应包含标签，这可能导致错误结果。</p>
+<h2>不合规示例</h2>
+<p>例1</p>
 <pre>
 switch (day) {
   case MONDAY:
   case TUESDAY:
-  WEDNESDAY:   // instead of "case WEDNESDAY"
+  WEDNESDAY:   // 替换为 "case WEDNESDAY"
     doSomething();
     break;
   ...
 }
 </pre>
-<p>Case 2, the code is correct and behaves as expected but is hardly readable </p>
+<p>例2</p>
 <pre>
 switch (day) {
   case MONDAY:
@@ -20,15 +19,15 @@ switch (day) {
   case TUESDAY:
     foo:for(i = 0 ; i &lt; X ; i++) {
          /* ... */
-        break foo;  // this break statement doesn't relate to the nesting case TUESDAY
+        break foo;  // 这里的 break 语句与 case TUESDAY 无关
          /* ... */
     }
     break;
     /* ... */
 }
 </pre>
-<h2>Compliant Solution</h2>
-<p>Case 1</p>
+<h2>合规示例</h2>
+<p>例1</p>
 <pre>
 switch (day) {
   case MONDAY:
@@ -39,13 +38,13 @@ switch (day) {
   ...
 }
 </pre>
-<p>Case 2</p>
+<p>例2</p>
 <pre>
 switch (day) {
   case MONDAY:
     break;
   case TUESDAY:
-    compute(args); // put the content of the labelled "for" statement in a dedicated method
+    compute(args); // 将标记为for语句的内容放入指定的方法中
     break;
 
     /* ... */

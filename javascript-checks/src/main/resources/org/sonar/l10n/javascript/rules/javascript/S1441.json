@@ -1,5 +1,5 @@
 {
-  "title": "Quotes for string literals should be used consistently",
+  "title": "字符串文字的引号应一致使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

@@ -1,14 +1,17 @@
-<p>The use of wrapper objects for primitive types is gratuitous, confusing and dangerous. If you use a wrapper object constructor for type conversion,
-just remove the <code>new</code> keyword, and you'll get a primitive value automatically. If you use a wrapper object as a way to add properties to a
-primitive, you should re-think the design. Such uses are considered bad practice, and should be refactored.</p>
-<h2>Noncompliant Code Example</h2>
+<p>
+  对原始类型使用包装器对象是不必要的且危险的。
+  如果您使用包装对象构造函数进行类型转换，只需删除 <code>new</code> 关键字，您将自动获得原始值。
+  如果您使用包装器对象作为向基元添加属性的方式，您应该重新考虑设计。
+  这种使用被认为是不好的做法，应该重构。
+</p>
+<h2>不合规示例</h2>
 <pre>
 let x = new Number("0");
 if (x) {
-  alert('hi');  // Shows 'hi'.
+  alert('hi');  // 输出 'hi'.
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规示例</h2>
 <pre>
 let x = Number("0");
 if (x) {
