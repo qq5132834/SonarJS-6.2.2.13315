@@ -1,5 +1,5 @@
 {
-  "title": "不应忽略函数参数、捕获的异常和foreach变量的初始值",
+  "title": "不应修改函数参数、捕获的异常和foreach参数",
   "type": "BUG",
   "status": "ready",
   "remediation": {
