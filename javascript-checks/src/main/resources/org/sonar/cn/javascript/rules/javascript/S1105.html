@@ -1,5 +1,5 @@
 <p>
-  当大括号样式不遵守规范时，此规则会引发问题：
+  代码中使用大括号样式不遵守规范时，此规则会引发问题：
 </p>
 <h2>不合规示例</h2>
 <p>使用参数：</p>
@@ -20,17 +20,3 @@ if (condition) {                                   //合规
   doSomethingElse();
 }
 </pre>
-<h2>例外</h2>
-<p> * 作为参数出现时 </p>
-<pre>
-functionWithObject(
-   {                                                 //合规
-        g: "someValue"
-   }
-);
-</pre>
-<p> * 当块被内联时（左右大括号在同一行），不会触发任何问题。</p>
-<pre>
-if(condition) {doSomething();}                       //合规
-</pre>
-
