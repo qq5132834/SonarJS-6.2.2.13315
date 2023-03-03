@@ -8,7 +8,6 @@
   <li> <code>Access-Control-Allow-Origin</code> 标头应该仅为受信任的来源和特定资源设置。</li>
 </ul>
 <h2>敏感示例</h2>
-<p><a href="https://nodejs.org/api/http.html">nodejs http</a> built-in module:</p>
 <pre>
 const http = require('http');
 const srv = http.createServer((req, res) =&gt; {
@@ -17,17 +16,15 @@ const srv = http.createServer((req, res) =&gt; {
 });
 srv.listen(3000);
 </pre>
-<p><a href="https://expressjs.com/">Express.js</a> framework with <a href="https://github.com/expressjs/cors">cors middleware</a>:</p>
 <pre>
 const app = express();
 
 app.use((req, res, next) =&gt; {
-    res.header('Access-Control-Allow-Origin', '*'); // Sensitive
+    res.header('Access-Control-Allow-Origin', '*'); // 敏感
     next();
 });
 </pre>
 <h2>合规示例</h2>
-<p><a href="https://nodejs.org/api/http.html">nodejs http</a> built-in module:</p>
 <pre>
 const http = require('http');
 const srv = http.createServer((req, res) =&gt; {
@@ -36,7 +33,6 @@ const srv = http.createServer((req, res) =&gt; {
 });
 srv.listen(3000);
 </pre>
-<p><a href="https://expressjs.com/">Express.js</a> framework with <a href="https://github.com/expressjs/cors">cors middleware</a>:</p>
 <pre>
 const app = express();
 
