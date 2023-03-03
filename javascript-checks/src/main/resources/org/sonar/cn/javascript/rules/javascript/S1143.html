@@ -1,8 +1,7 @@
-<p>使用 <code>finally</code> 块中的 <code>return</code>、<code>break</code>、<code>throw</code> 和 <code>continue</code>
-  覆盖类似来自挂起的 <code>try</code> 和 <code>catch</code> 块的语句。
+<p>
+  <code>break</code>、<code>continue</code>、<code>return</code> 和 <code>throw</code>不应出现在<code>finally</code>块中。
 </p>
-<p>当跳转语句<code>break</code>、<code>continue</code>、<code>return</code> 和 <code>throw</code>会强制控制流时，
-  此规则会引发问题留下一个 <code>finally</code> 块。</p>
+
 <h2>不合规示例</h2>
 <pre>
 function foo() {
