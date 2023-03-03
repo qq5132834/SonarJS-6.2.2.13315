@@ -1,5 +1,5 @@
 {
-  "title": "标准输出不应用于直接记录内容",
+  "title": "调试代码不要出现在生产代码中",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
