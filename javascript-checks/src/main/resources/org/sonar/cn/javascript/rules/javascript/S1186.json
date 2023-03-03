@@ -1,5 +1,5 @@
 {
-  "title": "函数不能为空",
+  "title": "函数体不能为空",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
