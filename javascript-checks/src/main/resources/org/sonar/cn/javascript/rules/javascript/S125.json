@@ -1,5 +1,5 @@
 {
-  "title": "代码部分不应注释掉",
+  "title": "删除注释掉的代码",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
