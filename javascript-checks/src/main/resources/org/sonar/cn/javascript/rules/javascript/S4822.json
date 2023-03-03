@@ -1,5 +1,5 @@
 {
-  "title": "Promise rejections should not be caught by 'try' block",
+  "title": "Promise.reject()被try-catch块捕获",
   "type": "BUG",
   "status": "ready",
   "remediation": {
