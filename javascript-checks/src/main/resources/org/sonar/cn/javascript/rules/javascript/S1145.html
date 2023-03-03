@@ -1,14 +1,6 @@
 <p>
-  <code>if</code> 条件始终为假的语句使代码块无法运行。
-  <code>if</code> 条件始终为真的语句是完全多余的，并且会降低代码的可读性。
+  应该删除无用的"if(true) {...}"和"if(false){...}"块。没有条件判断的if语句时没有意义的。
 </p>
-<p>存在此类代码的可能原因有以下三种：</p>
-<ul>
-  <li> 调试期间更改了 if 语句，并且已提交该调试代码。 </li>
-  <li> 一些值未设置。 </li>
-  <li> 有些逻辑并没有按照程序员的想法去做。 </li>
-</ul>
-<p>在任何这些情况下，都应删除无条件的 <code>if</code> 语句。</p>
 <h2>不合规示例</h2>
 <pre>
 if (true) {  // 不合规
@@ -27,9 +19,4 @@ doSomething();
 
 doThirdThing();
 </pre>
-<h2>参考</h2>
-<ul>
-  <li> <a href="http://cwe.mitre.org/data/definitions/570.html">MITRE, CWE-570</a> - 表达式总是False </li>
-  <li> <a href="http://cwe.mitre.org/data/definitions/571.html">MITRE, CWE-571</a> - 表达式总是True </li>
-</ul>
 

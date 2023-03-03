@@ -1,4 +1,4 @@
-<p>未使用的参数具有误导性。 无论传递给此类参数的值是什么，行为都是相同的。</p>
+<p>未使用的参数具有误导性。无论传递给此类参数的值是什么，行为都是相同的。</p>
 <h2>不合规示例</h2>
 <pre>
 function doSomething(a, b) { // "a" 没有被使用
@@ -9,34 +9,5 @@ function doSomething(a, b) { // "a" 没有被使用
 <pre>
 function doSomething(b) {
   return compute(b);
-}
-</pre>
-<h2>例外</h2>
-<p>在编写函数回调时，一些参数可能需要作为函数签名的一部分，但回调代码实际上并不需要。
-  例如，JQuery 有 'each' 助手来遍历数组或对象，但使用计数器 'i' 应该保持可选：</p>
-<pre>
-$(["first", "last"]).each(function (i, value) {
-  computeSomethingWithValue(value);
-});
-</pre>
-<p>
-  因此，只有在参数列表末尾列出的未使用的参数才会被标记为有问题，因为它们可以从函数签名中省略。
-  未使用的参数后跟<em>是</em> 使用的参数将被忽略。
-</p>
-<p>例如：</p>
-<pre>
-var myFirsCallBackFunction = function (p1, p2, p3, p4) {  // p2 被忽略，但 p4 被报告
-                                              return p1 + p3; }
-
-var mySecondCallBackFunction = function (p1, p2, p3, p4) {  // p1、p2 和 p3 被忽略
-                                              return p4; }
-
-var myThirdCallBackFunction = function (p1, p2, p3, p4) {  // p1 被忽略但 p3 和 p4 被报告
-                                              return p2; }
-</pre>
-<p>此外，当在函数体中使用 <code>arguments</code> 时，没有参数被报告为未使用。</p>
-<pre>
-function doSomething(a, b, c) {
-  compute(arguments);
 }
 </pre>
